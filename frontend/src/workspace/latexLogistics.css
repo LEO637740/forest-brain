@@ -1,0 +1,68 @@
+.op-logistics-workspace { margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--op-line); }
+.op-logistics-workspace > header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:16px; }
+.op-logistics-workspace h3 { margin:0; font-size:16px; font-weight:600; }
+.op-logistics-workspace > header span { color:#a8c8b8; font-size:12px; white-space:nowrap; }
+.op-batch-layout { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1.6fr); gap:18px; align-items:start; }
+.op-logistics .op-batch-list { display:flex; flex-direction:column; gap:8px; margin:0; }
+.op-logistics .op-batch-list button { display:block; width:100%; text-align:left; padding:12px; background:#222e2a; border:1px solid var(--op-line); cursor:pointer; }
+.op-logistics .op-batch-list button[aria-pressed="true"] { background:#294337; border-color:#93b9ab; }
+.op-batch-list strong,.op-batch-list span,.op-batch-list small { display:block; overflow-wrap:anywhere; }
+.op-batch-list strong { font-size:12px; margin-bottom:6px; }
+.op-batch-list span { font-size:12px; color:#b5dfcd; }
+.op-batch-list small { color:#a7b9ad; font-size:10px; line-height:1.7; margin-top:4px; }
+.op-batch-detail { border:1px solid var(--op-line); padding:18px; background:rgba(255,255,255,.02); min-width:0; }
+.op-batch-detail > header { display:flex; gap:12px; align-items:flex-start; justify-content:space-between; }
+.op-batch-detail h3 { margin:0 0 7px; font-size:16px; }
+.op-batch-detail h4,.op-collection-form h4 { font-size:13px; margin:0 0 12px; }
+.op-batch-detail .op-batch-id { font-size:10px; color:#9fafaa; overflow-wrap:anywhere; }
+.op-batch-detail > header > span { font-size:11px; color:#b5dfcd; white-space:nowrap; }
+.op-batch-steps { display:flex; padding:0; margin:18px 0; gap:5px; list-style:none; }
+.op-batch-steps li { flex:1; padding:8px 4px; text-align:center; font-size:11px; border-bottom:2px solid #405349; color:#93a89b; }
+.op-batch-steps li.complete { color:#b5dfcd; border-color:#729a80; }
+.op-batch-steps li.current { color:#e1eadf; border-color:#c3dca1; background:#304139; }
+.op-batch-summary { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:15px 0; }
+.op-batch-summary > div { padding:10px 12px; background:#242f29; }
+.op-batch-summary dt { color:#9fb2a6; font-size:11px; }
+.op-batch-summary dd { margin:5px 0 0; font-size:13px; line-height:1.65; overflow-wrap:anywhere; }
+.op-batch-summary dd small { display:block; font-size:10px; color:#a8bbb0; }
+.op-batch-hold,.op-batch-error { margin:14px 0; padding:10px 12px; border-left:3px solid #b29a6b; background:#343127; color:#ecc886; font-size:12px; line-height:1.8; overflow-wrap:anywhere; }
+.op-batch-detail fieldset,.op-collection-form fieldset { border:0; padding:0; margin:0; min-width:0; }
+.op-batch-form,.op-collection-form { padding:16px; margin:16px 0; border:1px solid var(--op-line); background:#202a25; }
+.op-batch-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.op-batch-form label,.op-collection-form label { display:flex; flex-direction:column; gap:7px; font-size:11px; color:#bdcec3; margin-bottom:12px; }
+.op-batch-form input,.op-batch-form select,.op-batch-form textarea,.op-collection-form input,.op-collection-form select,.op-collection-form textarea { box-sizing:border-box; min-width:0; width:100%; border:1px solid #52685a; background:#17211c; color:#e1eadf; border-radius:2px; padding:9px 10px; font:inherit; font-size:12px; }
+.op-batch-form textarea,.op-collection-form textarea { resize:vertical; }
+.op-batch-detail button,.op-collection-form button { border:1px solid #527363; color:#b5dfcd; background:transparent; padding:9px 11px; cursor:pointer; font-size:11px; }
+.op-batch-detail button:disabled,.op-collection-form button:disabled,.op-logistics td button:disabled { opacity:.5; cursor:not-allowed; }
+.op-batch-detail .op-batch-primary,.op-collection-form .op-batch-primary { background:#315441; color:#d4ecd9; border-color:#7c9f85; }
+.op-batch-hold button { display:block; margin-top:8px; }
+.op-batch-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.op-batch-action-issue { font-size:11px!important; color:#d9c69b!important; margin:9px 0!important; }
+.op-batch-records { border-top:1px solid var(--op-line); margin-top:20px; padding-top:14px; }
+.op-batch-records summary { cursor:pointer; font-size:12px; color:#bdcec3; }
+.op-batch-management { margin-top:14px; padding-top:12px; }
+.op-batch-records ol { margin:14px 0 0; padding-left:18px; }
+.op-batch-records li { padding:0 0 15px 6px; color:#b8c9be; font-size:11px; line-height:1.8; overflow-wrap:anywhere; }
+.op-batch-records li strong { display:block; color:#d1e0d7; font-size:12px; }
+.op-batch-records li small { color:#9fafaa; font-size:10px; }
+.op-batch-records p { font-size:11px; margin:4px 0; }
+.op-batch-empty { padding:25px 15px; border:1px dashed #52685a; text-align:center; }
+.op-batch-empty strong { font-size:13px; }
+.op-batch-empty p { font-size:11px; }
+.op-logistics .op-logistics-table td .op-logistics-row-actions { display:flex; flex-wrap:wrap; gap:7px; }
+.op-logistics-table th:nth-child(5) { width:140px; }
+@media(max-width:900px){ .op-batch-layout { grid-template-columns:1fr; } .op-logistics .op-batch-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px){ .op-logistics .op-batch-list,.op-batch-summary,.op-batch-form-grid { grid-template-columns:1fr; } .op-batch-detail { padding:12px; } .op-batch-detail > header,.op-logistics-workspace > header { flex-direction:column; } .op-batch-steps { gap:2px; } .op-batch-steps li { font-size:10px; padding:8px 1px; } }
+
+.op-batch-source { display:inline-flex; align-items:center; gap:6px; margin-bottom:10px; padding:8px 10px; border:1px solid #527363; color:#b5dfcd; background:transparent; cursor:pointer; font-size:11px; }
+.op-logistics-state.received,.op-logistics-state.ready { color:#a9d8c1; }
+.op-logistics-state.processed { color:#b2e4c2; }
+.op-batch-processed { padding:17px 18px; margin:18px 0; border:1px solid #729b7b; border-radius:5px; background:#294331; }
+.op-batch-processed h4 { margin:0 0 9px; color:#b9ddc1; font-size:12px; }
+.op-batch-processed > strong { font-size:23px; line-height:1.5; font-weight:600; color:#e0f1e3; }
+.op-batch-processed p,.op-batch-processing-note p { color:#b5cdbb; font-size:12px; line-height:1.8; margin:8px 0; }
+.op-batch-processing-note { margin:0 0 16px; padding:1px 12px; border-left:3px solid #71957a; background:#253b2d; }
+.op-batch-processing-note strong { color:#d9eadb; font-weight:600; }
+.op-batch-quantity-note { color:#b5cdbb; font-size:12px; line-height:1.8; }
+.op-batch-processing-note h4 { padding-top:12px; }
+.op-logistics-state.processing { color:#e1cea3; }

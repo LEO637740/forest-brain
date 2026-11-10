@@ -1,0 +1,88 @@
+{
+  "status": "DEMO_GEOMETRY_CANDIDATE",
+  "executionApproved": false,
+  "contactApproved": false,
+  "cuttingApproved": false,
+  "connectedToOtherSegments": false,
+  "runtimeTreeYawRadians": 3.446044265507184,
+  "treeIndices": [
+    111
+  ],
+  "treeSource": {
+    "index": 111,
+    "id": "HN-C-0012",
+    "family": "A",
+    "assetVariant": "original_mature_family",
+    "scale": 1.0092323936149479,
+    "yawRadians": 3.446044265507184,
+    "worldGltf": [
+      25.0571989875054,
+      6.952796292232066,
+      20.957087916472712
+    ],
+    "targetAnchorTreeLocalGltfM": [
+      0.1,
+      1.65,
+      0.29964637756347656
+    ],
+    "anchorStatus": "provisional visible trunk surface approach point; no confirmed tapping line or cut face",
+    "anchorEvidence": {
+      "source": "original RT_Mature_A_LOD0.glb Body mesh",
+      "method": "ray from local +Z at x=0.1 m, y=1.65 m toward -Z",
+      "hitNormalGltf": [
+        0.2492397129535675,
+        -0.017754020169377327,
+        0.9682791233062744
+      ],
+      "triangleIndex": 15483
+    }
+  },
+  "bestStraightRail": {
+    "rootWorldGltf": [
+      24.443046933414475,
+      7.13115987445993,
+      20.07312745070111
+    ],
+    "yawRadians": 3.446044265507184,
+    "segmentCentersLocalX": [
+      0
+    ],
+    "supports": [
+      {
+        "localX": -1.18,
+        "localZ": -0.26,
+        "pierDepthM": 0.08002409623306317
+      },
+      {
+        "localX": -1.18,
+        "localZ": 0.26,
+        "pierDepthM": 0.07527455855787668
+      },
+      {
+        "localX": 1.18,
+        "localZ": -0.26,
+        "pierDepthM": 0.33202503868233535
+      },
+      {
+        "localX": 1.18,
+        "localZ": 0.26,
+        "pierDepthM": 0.32685663927499586
+      }
+    ],
+    "stations": [
+      {
+        "id": "HN-C-0012",
+        "parkLocalX": 0,
+        "extensionM": 0.05,
+        "sliderOffsetM": -0.303130132763199,
+        "toolFeedM": 0
+      }
+    ]
+  },
+  "screen": {
+    "roadShoulderMarginM": 13.306655747401052,
+    "noncontactCollision": "PASS_SAMPLED",
+    "batchFootprint": "PASS_PLAN_FOOTPRINT",
+    "assumptions": "Single 3.2 m twin-profile segment; local rail X is travel axis, tree is local -Z; no cross-segment route."
+  }
+}

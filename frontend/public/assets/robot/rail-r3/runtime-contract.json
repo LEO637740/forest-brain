@@ -1,0 +1,110 @@
+{
+  "revision": "R3",
+  "units": "meters",
+  "status": "provisional demonstration geometry; sampled targeted checks only",
+  "coordinates": {
+    "blender_to_gltf": "(x,y,z) -> (x,z,-y)",
+    "gltf_up": "+Y",
+    "rail_axis": "+X",
+    "toward_tree": "-Z",
+    "scale": 1
+  },
+  "nodes": {
+    "ARM_SLIDE": {
+      "axis": "local z",
+      "base": 0
+    },
+    "VERTICAL_SLIDER": {
+      "axis": "local y",
+      "base": 0.6699999999999999
+    },
+    "TOOL_FEED": {
+      "axis": "local z",
+      "base": 0
+    },
+    "ROBOT_RAIL_ANCHOR": {
+      "position": [
+        0,
+        0.82,
+        0
+      ]
+    },
+    "TOOL_TCP": {
+      "parent": "TOOL_FEED",
+      "position": [
+        0,
+        0,
+        -0.155
+      ]
+    }
+  },
+  "ranges": {
+    "extension": [
+      0,
+      0.48
+    ],
+    "sliderOffset": [
+      -0.12,
+      0
+    ],
+    "toolFeed": [
+      0,
+      0.005
+    ]
+  },
+  "poses": {
+    "stowed": {
+      "extension": 0,
+      "sliderOffset": 0,
+      "toolFeed": 0
+    },
+    "extended": {
+      "extension": 0.3,
+      "sliderOffset": 0,
+      "toolFeed": 0
+    },
+    "approach": {
+      "extension": 0.48,
+      "sliderOffset": -0.12,
+      "toolFeed": 0.005
+    }
+  },
+  "sampled_path": [
+    [
+      "stowed",
+      "extended"
+    ],
+    [
+      "extended",
+      "approach"
+    ]
+  ],
+  "sample_intervals_per_segment": 30,
+  "geometry_adjustments_blender_local_m": {
+    "sleeve_start_y": -0.2,
+    "sleeve_end_y": 0.42,
+    "mount_center": [
+      0.085,
+      0,
+      -0.07
+    ],
+    "mount_dimensions": [
+      0.43,
+      0.59,
+      0.04
+    ],
+    "axis_cover_center": [
+      0.16,
+      0.025,
+      0.0025
+    ],
+    "drive_cover_center": [
+      0.14,
+      -0.2,
+      -0.005
+    ],
+    "samples_per_segment_intervals": 30
+  },
+  "compatibility": "R2 movement axes, TCP, rail anchor and pose values retained. Fixed mount, covers and sleeve geometry changed.",
+  "clearance_limits": "61 sampled states; not continuous collision certification. Internal mating interfaces, wheels/rail, real bark and cup excluded."
+}

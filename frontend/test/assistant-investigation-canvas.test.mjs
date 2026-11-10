@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initialCanvas,endpoint} from '../src/workspace/investigation/investigationLayout.ts';
+const graph=(layout,count=12,cycle=false)=>({title:'test',layout,nodes:Array.from({length:count},(_,i)=>({id:'n'+i,kind:'fact',text:'same kind does not determine columns',evidenceIds:['E1']})),edges:Array.from({length:count-1},(_,i)=>({from:'n'+i,to:'n'+(i+1)})).concat(cycle?[{from:'n'+(count-1),to:'n0'}]:[])});
+for(const layout of ['flow','radial','comparison'])test('canvas '+layout+': twenty nodes are finite and not overlapping',()=>{const c=initialCanvas(graph(layout,20));assert.equal(c.nodes.length,20);for(const a of c.nodes){assert.ok([a.x,a.y,a.width,a.height].every(Number.isFinite));for(const b of c.nodes.filter(b=>b.id!==a.id))assert.ok(a.x+a.width<=b.x||b.x+b.width<=a.x||a.y+a.height<=b.y||b.y+b.height<=a.y,'overlap '+a.id+' '+b.id);}assert.equal(endpoint(c.nodes[0],'right').x,c.nodes[0].x+250)});
+test('canvas cycles have a finite fallback; originals remain unchanged',()=>{const g=graph('flow',8,true),before=JSON.stringify(g),c=initialCanvas(g);assert.equal(JSON.stringify(g),before);assert.ok(c.nodes.every(n=>Number.isFinite(n.x)&&Number.isFinite(n.y)));});
+test('canvas flow follows dependencies, not the four evidence kinds',()=>{const g=graph('flow',4);const c=initialCanvas(g);assert.ok(c.nodes[3].x>c.nodes[0].x);assert.equal(c.nodes[0].y,c.nodes[3].y)});

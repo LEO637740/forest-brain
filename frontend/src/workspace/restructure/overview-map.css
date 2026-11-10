@@ -1,0 +1,59 @@
+.rb-shell .rb-overview{max-width:1920px;padding:24px 32px 40px}
+.rb-shell .rb-overview-grid{grid-template-columns:minmax(0,1.9fr) minmax(320px,1fr);gap:20px}
+.rb-shell .rb-overview-primary,.rb-shell .rb-decision-column{gap:20px}
+.rb-shell .rb-overview .rb-section{border-radius:3px;padding:20px}
+.rb-shell .rb-overview-head{margin-bottom:18px}
+.rb-shell .rb-overview .rb-metric-strip{margin-bottom:22px}
+.rb-shell .om-section{padding-bottom:0}
+.om-section .rb-section-head{margin-bottom:14px}
+.om-canvas{position:relative;background:#141a1e;border:1px solid #354048;overflow:hidden}
+.om-canvas>svg{display:block;width:100%;height:390px}
+.om-map-toolbar{position:absolute;left:14px;right:14px;top:12px;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#b2bdc5;pointer-events:none}
+.om-map-toolbar button{pointer-events:auto;display:flex;gap:6px;align-items:center;background:#1b2227;color:#edf1f3;border:1px solid #354048;padding:7px 10px;cursor:pointer}
+.om-province{fill:#29343a;stroke:#536169;stroke-width:.55}
+.om-marker{cursor:pointer;outline:none;fill:#81d1b1}
+.om-marker .om-halo{fill:#81d1b1;fill-opacity:.13;stroke:#81d1b1;stroke-width:.6}
+.om-marker rect{fill:#1b2227;stroke:#536169;stroke-width:.6}
+.om-marker text{fill:#edf1f3;font-size:12px;font-weight:600}
+.om-marker .om-map-sub,.om-map-sub{fill:#aab7bf;font-size:10px;font-weight:400}
+.om-marker:focus rect,.om-marker:hover rect{stroke:#81d1b1;stroke-width:1.4}
+.om-map-foot{display:flex;justify-content:space-between;gap:12px;padding:9px 13px;font-size:10px;color:#87969f;border-top:1px solid #354048}
+.om-selection{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:17px 0}
+.om-selection small{display:block;color:#87969f;font-size:11px;margin-bottom:6px}
+.om-selection strong{font-size:17px;color:#edf1f3}
+.om-selection p{margin:7px 0 0;color:#b2bdc5;font-size:11px;line-height:1.6}
+.om-selection-actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0;font-size:11px;color:#b2bdc5}
+.om-selection-actions button{display:flex;align-items:center;gap:8px;background:transparent;border:0;color:#81d1b1;cursor:pointer;font-size:12px;padding:2px}
+.om-sites{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #354048}
+.om-sites button{background:transparent;border:0;border-bottom:2px solid transparent;color:#b2bdc5;display:flex;align-items:center;gap:7px;padding:14px 8px;cursor:pointer;font-size:12px}
+.om-sites button.selected{border-bottom-color:#81d1b1;color:#edf1f3;background:#232c32}
+.om-sites button span{margin-left:auto;font-size:11px;white-space:nowrap}
+.om-block{cursor:pointer;outline:none}
+.om-block rect{fill:#25342f;stroke:#61796d;stroke-width:1}
+.om-block rect.selected,.om-block:focus rect,.om-block:hover rect{fill:#2a4137;stroke:#81d1b1;stroke-width:1.5}
+.om-block text{fill:#edf1f3;font-size:11px}
+.om-tree{fill:#8db4a1;cursor:pointer;stroke:transparent;stroke-width:3}
+.om-tree.selected,.om-tree:hover,.om-tree:focus{fill:#edf1f3;stroke:#81d1b1;stroke-width:1.5;outline:none}
+.om-loading{position:absolute;inset:45% 0;text-align:center;font-size:13px;color:#b2bdc5}
+.om-disclosure{font-size:12px;color:#dabb7c;padding:0 0 15px}
+.rb-shell .rb-overview .rb-station-table td,.rb-shell .rb-overview .rb-station-table th{padding-top:16px;padding-bottom:16px}
+.rb-shell .rb-overview .rb-coverage-note{font-size:11px;line-height:1.7}
+.ov-weather-chart{display:flex;align-items:flex-end;gap:8px;height:115px;padding:12px 0 20px;border-bottom:1px solid #354048;margin-top:12px}
+.ov-weather-chart>div{position:relative;flex:1;height:100%;display:flex;align-items:flex-end;justify-content:center}
+.ov-weather-chart i{background:#86b7e0;width:70%;min-height:2px}
+.ov-weather-chart .forecast{background:transparent;border:1px dashed #86b7e0}
+.ov-weather-chart span{position:absolute;bottom:-18px;font-size:10px;color:#87969f}
+.ov-weather-chart b{position:absolute;font-size:10px;font-weight:400;color:#b2bdc5}
+.ov-caption{font-size:12px;line-height:1.8;color:#b2bdc5;margin:12px 0 0}
+.ov-logistics-flow{display:flex;align-items:center;justify-content:space-between;margin:22px 0;color:#87969f;font-size:14px}
+.ov-logistics-flow span{border-bottom:2px solid #536169;padding:10px 3px;color:#edf1f3;font-size:12px}
+.ov-logistics dl{margin:0}
+.ov-logistics dl>div{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid #354048;font-size:12px}
+.ov-logistics dt{color:#b2bdc5}.ov-logistics dd{margin:0;color:#87969f}
+.ov-logistics summary{cursor:pointer;font-size:12px;color:#81d1b1;margin-top:16px}
+.ov-logistics details p{font-size:12px;line-height:1.8;color:#b2bdc5}
+@media(min-width:1700px){.om-canvas>svg{height:440px}}
+@media(max-width:1100px){.rb-shell .rb-overview-grid{grid-template-columns:1fr}.rb-shell .rb-decision-column{display:grid;grid-template-columns:1fr 1fr}.om-canvas>svg{height:400px}}
+@media(max-width:650px){.rb-shell .rb-overview{padding:18px 12px}.rb-shell .rb-decision-column{grid-template-columns:1fr}.om-canvas>svg{height:310px}.om-sites button{flex-wrap:wrap}.om-sites button span{width:100%;margin:0}.om-selection{align-items:flex-start;gap:10px}.om-selection-actions{max-width:140px}}
+
+.om-region-switch{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px}.om-region-switch button{padding:7px 12px;color:#b2bdc5;background:#1b2227;border:1px solid #45524f;cursor:pointer}.om-region-switch button[aria-pressed=true]{color:#e5f0ea;border-color:#8bb3a3;background:#2c4139}.om-region-switch span{font-size:11px;color:#91a19f;margin-left:auto}.om-province-label{fill:#b5c4be;font-size:13px;letter-spacing:2px;text-anchor:middle;pointer-events:none}.om-pending-marker{fill:#bcad84}.om-pending-marker circle{fill:none;stroke:#bcad84;stroke-dasharray:2 2}.om-pending-marker text{fill:#d7c9a5;font-size:10px}

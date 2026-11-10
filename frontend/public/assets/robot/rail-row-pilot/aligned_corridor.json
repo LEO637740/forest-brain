@@ -1,0 +1,438 @@
+{
+  "status": "NOMINAL_SCREEN_ONLY",
+  "executionApproved": false,
+  "contactApproved": false,
+  "cuttingApproved": false,
+  "source": "Fixed business positions/scales, runtime yaw 0 for indices 115/116/117; original Mature B higher sample point",
+  "v20ReplacementIndices": [
+    100,
+    101,
+    102,
+    103,
+    105,
+    106
+  ],
+  "v20AnchorReuseAllowed": false,
+  "runtimeTreeYawRadians": 0,
+  "treeIndices": [
+    115,
+    116,
+    117
+  ],
+  "treeAssetVariant": "original_mature_family_B",
+  "candidatePointTreeLocalGltfM": [
+    0.0936395297793764,
+    1.654399189035007,
+    0.24764717068563352
+  ],
+  "search": {
+    "railYawRadians": [
+      -0.3,
+      0.3
+    ],
+    "stepRadians": 0.005,
+    "offsetSamplesPerYaw": 11,
+    "alongTrackCenterShiftM": [
+      -0.9,
+      0.9
+    ],
+    "alongTrackShiftStepM": 0.01,
+    "minimumWheelEndMarginM": 0.15,
+    "feasibleLayouts": 11000
+  },
+  "selectionRule": "Among nominal axis and road-margin passes, maximize minimum extension-axis slack times road-margin excess.",
+  "bestStraightRail": {
+    "yawRadians": 0.125,
+    "rootWorldGltf": [
+      52.19110397076086,
+      8.099337556514927,
+      20.640253759121965
+    ],
+    "lengthM": 12.8,
+    "segmentCount": 4,
+    "segmentCentersLocalX": [
+      -4.800000000000001,
+      -1.6000000000000005,
+      1.5999999999999996,
+      4.800000000000001
+    ],
+    "roadMarginM": 1.2079242142698423,
+    "terrainRiseM": 0.2552735046373238,
+    "maximumAxisExcessM": 0,
+    "score": 1.25,
+    "stations": [
+      {
+        "index": 115,
+        "id": "HN-C-0016",
+        "scale": 1.0273270853981376,
+        "treeWorld": [
+          45.92903929234017,
+          8.081229590292114,
+          20.430823015133864
+        ],
+        "targetWorldXZ": [
+          46.02523771754647,
+          20.68523766120143
+        ],
+        "parkLocalX": -5.903366468885749,
+        "extensionM": 0.04909480850236103,
+        "sliderOffsetM": -0.10849886926643659,
+        "toolFeedM": 0,
+        "extensionExcessM": 0,
+        "sliderExcessM": 0,
+        "wheelEndMarginM": 0.15663353111425132
+      },
+      {
+        "index": 116,
+        "id": "HN-C-0017",
+        "scale": 0.9618049608916045,
+        "treeWorld": [
+          51.13048694197787,
+          8.088965865642567,
+          19.348947079313135
+        ],
+        "targetWorldXZ": [
+          51.22054990625523,
+          19.587135356629346
+        ],
+        "parkLocalX": -0.6116842226685921,
+        "extensionM": 0.490905191497643,
+        "sliderOffsetM": -0.20916234356344265,
+        "toolFeedM": 0,
+        "extensionExcessM": 0,
+        "sliderExcessM": 0,
+        "wheelEndMarginM": 5.448315777331408
+      },
+      {
+        "index": 117,
+        "id": "HN-C-0018",
+        "scale": 0.9752999177947641,
+        "treeWorld": [
+          56.416543839126824,
+          7.936201672963974,
+          19.113131624960165
+        ],
+        "targetWorldXZ": [
+          56.50787046482299,
+          19.35466189017197
+        ],
+        "parkLocalX": 4.663366468885735,
+        "extensionM": 0.06236954164770192,
+        "sliderOffsetM": -0.33960049048538554,
+        "toolFeedM": 0,
+        "extensionExcessM": 0,
+        "sliderExcessM": 0,
+        "wheelEndMarginM": 1.3966335311142657
+      }
+    ],
+    "supports": [
+      {
+        "segment": 0,
+        "localX": -5.98,
+        "localZ": -0.26,
+        "worldX": 46.22534649004931,
+        "worldZ": 21.127837271286,
+        "groundY": 8.05443436552526,
+        "roadMarginM": 1.5826739980032463,
+        "pierDepthM": 0.04490319098966644
+      },
+      {
+        "segment": 0,
+        "localX": -5.98,
+        "localZ": 0.26,
+        "worldX": 46.29017735140963,
+        "worldZ": 21.64378005824525,
+        "groundY": 8.032503269699806,
+        "roadMarginM": 1.4781430137140148,
+        "pierDepthM": 0.06683428681512105
+      },
+      {
+        "segment": 0,
+        "localX": -3.620000000000001,
+        "localZ": -0.26,
+        "worldX": 48.566932984710526,
+        "worldZ": 20.833604900496862,
+        "groundY": 8.064337556514927,
+        "roadMarginM": 3.8944990979058227,
+        "pierDepthM": 0.03500000000000014
+      },
+      {
+        "segment": 0,
+        "localX": -3.620000000000001,
+        "localZ": 0.26,
+        "worldX": 48.63176384607085,
+        "worldZ": 21.349547687456113,
+        "groundY": 8.042263871340744,
+        "roadMarginM": 3.7899681136165917,
+        "pierDepthM": 0.0570736851741831
+      },
+      {
+        "segment": 1,
+        "localX": -2.7800000000000002,
+        "localZ": -0.26,
+        "worldX": 49.40037902518316,
+        "worldZ": 20.728878124453274,
+        "groundY": 8.06158301495918,
+        "roadMarginM": 4.717352099566063,
+        "pierDepthM": 0.03775454155574742
+      },
+      {
+        "segment": 1,
+        "localX": -2.7800000000000002,
+        "localZ": 0.26,
+        "worldX": 49.465209886543484,
+        "worldZ": 21.244820911412525,
+        "groundY": 8.039448424946874,
+        "roadMarginM": 4.612821115276833,
+        "pierDepthM": 0.059889131568052534
+      },
+      {
+        "segment": 1,
+        "localX": -0.4200000000000006,
+        "localZ": -0.26,
+        "worldX": 51.74196551984438,
+        "worldZ": 20.434645753664135,
+        "groundY": 8.036297774976086,
+        "roadMarginM": 7.0291771994686405,
+        "pierDepthM": 0.0630397815388406
+      },
+      {
+        "segment": 1,
+        "localX": -0.4200000000000006,
+        "localZ": 0.26,
+        "worldX": 51.8067963812047,
+        "worldZ": 20.950588540623386,
+        "groundY": 8.013964033728739,
+        "roadMarginM": 6.924646215179409,
+        "pierDepthM": 0.08537352278618826
+      },
+      {
+        "segment": 2,
+        "localX": 0.4199999999999997,
+        "localZ": -0.26,
+        "worldX": 52.575411560317015,
+        "worldZ": 20.329918977620544,
+        "groundY": 8.021089119089982,
+        "roadMarginM": 7.852030201128882,
+        "pierDepthM": 0.07824843742494458
+      },
+      {
+        "segment": 2,
+        "localX": 0.4199999999999997,
+        "localZ": 0.26,
+        "worldX": 52.640242421677335,
+        "worldZ": 20.845861764579794,
+        "groundY": 7.998674654959103,
+        "roadMarginM": 7.747499216839649,
+        "pierDepthM": 0.10066290155582358
+      },
+      {
+        "segment": 2,
+        "localX": 2.7799999999999994,
+        "localZ": -0.26,
+        "worldX": 54.91699805497823,
+        "worldZ": 20.03568660683141,
+        "groundY": 7.961101996824578,
+        "roadMarginM": 10.163855301031456,
+        "pierDepthM": 0.13823555969034906
+      },
+      {
+        "segment": 2,
+        "localX": 2.7799999999999994,
+        "localZ": 0.26,
+        "worldX": 54.98182891633855,
+        "worldZ": 20.55162939379066,
+        "groundY": 7.938433700001206,
+        "roadMarginM": 10.059324316742222,
+        "pierDepthM": 0.16090385651372063
+      },
+      {
+        "segment": 3,
+        "localX": 3.620000000000001,
+        "localZ": -0.26,
+        "worldX": 55.75044409545087,
+        "worldZ": 19.930959830787817,
+        "groundY": 7.933667498447242,
+        "roadMarginM": 10.986708302691696,
+        "pierDepthM": 0.16567005806768442
+      },
+      {
+        "segment": 3,
+        "localX": 3.620000000000001,
+        "localZ": 0.26,
+        "worldX": 55.81527495681119,
+        "worldZ": 20.446902617747067,
+        "groundY": 7.9108994000088035,
+        "roadMarginM": 10.882177318402464,
+        "pierDepthM": 0.18843815650612328
+      },
+      {
+        "segment": 3,
+        "localX": 5.98,
+        "localZ": -0.26,
+        "worldX": 58.09203059011208,
+        "worldZ": 19.636727459998678,
+        "groundY": 7.839772948328797,
+        "roadMarginM": 13.298533402594273,
+        "pierDepthM": 0.25956460818613003
+      },
+      {
+        "segment": 3,
+        "localX": 5.98,
+        "localZ": 0.26,
+        "worldX": 58.1568614514724,
+        "worldZ": 20.15267024695793,
+        "groundY": 7.816698603263349,
+        "roadMarginM": 13.19400241830504,
+        "pierDepthM": 0.2826389532515776
+      }
+    ],
+    "offsetFeasibleRange": [
+      26.937028794955154,
+      27.03521841195987
+    ],
+    "alongTrackCenterShiftM": 0.84
+  },
+  "feasibilityScan": {
+    "axisPassLayouts": 11000,
+    "roadMarginPassLayouts": 75,
+    "axisAndRoadPassLayouts": 75,
+    "maximumRoadMarginAmongAxisPassM": 1.2177933078395407,
+    "maximumRoadMarginAnyLayoutM": 1.2177933078395407,
+    "maximumRoadMarginWithWheelEndBuffer020M": 1.168813962502617,
+    "passingLayoutExamples": [
+      {
+        "yawRadians": 0.11,
+        "alongTrackCenterShiftM": 0.84,
+        "roadMarginM": 1.2042632626583656,
+        "extensionM": [
+          6.661338147750939e-16,
+          0.5211329374146103,
+          0.1717682901120241
+        ],
+        "sliderOffsetM": [
+          -0.10898855240791061,
+          -0.20965202670491667,
+          -0.34009017362685956
+        ],
+        "wheelEndMarginM": [
+          0.15732745546260568,
+          5.441787491359746,
+          1.3973274554626058
+        ]
+      },
+      {
+        "yawRadians": 0.11,
+        "alongTrackCenterShiftM": 0.84,
+        "roadMarginM": 1.2038563156615136,
+        "extensionM": [
+          0.0018867062585392613,
+          0.5230196436731489,
+          0.1736549963705627
+        ],
+        "sliderOffsetM": [
+          -0.10891053407525231,
+          -0.20957400837225837,
+          -0.34001215529420126
+        ],
+        "wheelEndMarginM": [
+          0.15732745546260568,
+          5.441787491359746,
+          1.3973274554626058
+        ]
+      },
+      {
+        "yawRadians": 0.11,
+        "alongTrackCenterShiftM": 0.84,
+        "roadMarginM": 1.2034493686646603,
+        "extensionM": [
+          0.0037734125170778565,
+          0.5249063499316875,
+          0.1755417026291013
+        ],
+        "sliderOffsetM": [
+          -0.10883250157723179,
+          -0.20949597587423785,
+          -0.33993412279618074
+        ],
+        "wheelEndMarginM": [
+          0.15732745546260568,
+          5.441787491359746,
+          1.3973274554626058
+        ]
+      },
+      {
+        "yawRadians": 0.11,
+        "alongTrackCenterShiftM": 0.84,
+        "roadMarginM": 1.2030424216678217,
+        "extensionM": [
+          0.005660118775616452,
+          0.5267930561902261,
+          0.1774284088876399
+        ],
+        "sliderOffsetM": [
+          -0.10875445491457914,
+          -0.2094179292115852,
+          -0.3398560761335281
+        ],
+        "wheelEndMarginM": [
+          0.15732745546260568,
+          5.441787491359746,
+          1.3973274554626058
+        ]
+      },
+      {
+        "yawRadians": 0.11,
+        "alongTrackCenterShiftM": 0.84,
+        "roadMarginM": 1.202635474670968,
+        "extensionM": [
+          0.007546825034155047,
+          0.5286797624487647,
+          0.17931511514617848
+        ],
+        "sliderOffsetM": [
+          -0.1086763940880262,
+          -0.20933986838503227,
+          -0.33977801530697516
+        ],
+        "wheelEndMarginM": [
+          0.15732745546260568,
+          5.441787491359746,
+          1.3973274554626058
+        ]
+      }
+    ]
+  },
+  "nominalAxisAllPass": true,
+  "roadMarginPass": true,
+  "roadMarginExcessM": 0.007924214269842356,
+  "roadClearanceMethod": "Rail centerlines at local Z ±0.26 sampled every 0.2 m minus half top width 0.025 m; support center road distance minus 0.24×0.23 m footprint half-diagonal.",
+  "faceToRailHeadingDifferenceDeg": 7.16197243913529,
+  "supportNonembedded": true,
+  "capability": {
+    "stowedContinuousTravel": "NOMINAL_ONLY; four contiguous straight segments; no wheel-joint/mesh transit check",
+    "perTreeNoncontactApproach": "AXIS_RANGES_ONLY; no transformed tree/robot/cup path verification",
+    "cutting": "NOT_AUTHORIZED"
+  },
+  "frontEndHint": {
+    "segmentCentersLocalX": [
+      -4.800000000000001,
+      -1.6000000000000005,
+      1.5999999999999996,
+      4.800000000000001
+    ],
+    "parkInOrderIncreasingX": [
+      115,
+      116,
+      117
+    ],
+    "teleportAllowed": false,
+    "assetChangeRequired": false,
+    "runtimePlacementChangeRequired": true
+  },
+  "notes": [
+    "Only tree yaw changed at runtime; business positions, scale and IDs preserved.",
+    "Barker/cup collision, full robot/rail geometry, transient motion and cut semantics not checked here.",
+    "Road and terrain use source analytical functions; no manufacturing-grade route approval."
+  ]
+}

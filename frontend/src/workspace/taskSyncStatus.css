@@ -1,0 +1,37 @@
+.ws-task-sync{position:fixed;right:18px;bottom:18px;z-index:65;box-sizing:border-box;width:max-content;max-width:calc(100vw - 24px);color:#e3f1e9;background:#102219;border:1px solid #385b46;border-radius:9px;box-shadow:0 6px 24px #0005;font-size:13px;line-height:1.5;pointer-events:auto}
+.ws-task-sync[open]{width:360px}
+.ws-task-sync>summary{display:flex;align-items:center;gap:9px;min-height:42px;padding:8px 12px;box-sizing:border-box;cursor:pointer;list-style:none;overflow-wrap:anywhere}
+.ws-task-sync>summary::-webkit-details-marker{display:none}
+.ws-task-sync>summary::after{content:'⌄';margin-left:auto;color:#b1c9bb;font-size:18px;line-height:1;flex:none}
+.ws-task-sync[open]>summary::after{transform:rotate(180deg)}
+.ws-task-sync>summary:focus-visible,.ws-task-sync button:focus-visible{outline:2px solid #8ae2b9;outline-offset:3px}
+.ws-task-sync-dot{width:7px;height:7px;flex:none;border-radius:50%;background:#9bb9aa}
+.ws-task-sync--success .ws-task-sync-dot{background:#6cdda7}
+.ws-task-sync--warning .ws-task-sync-dot{background:#e2c178}
+.ws-task-sync--error .ws-task-sync-dot{background:#f19c8e}
+.ws-task-sync-label{min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;row-gap:2px}
+.ws-task-sync-label small{color:#d9c58e;font-size:12px;font-variant-numeric:tabular-nums}
+.ws-task-sync-body{max-height:min(60vh,420px);overflow-y:auto;overscroll-behavior:contain;border-top:1px solid #2e4b3a;padding:14px;overflow-wrap:anywhere}
+.ws-task-sync-body header{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.ws-task-sync-body header span{color:#a1bdac;font-size:12px;flex:none}
+.ws-task-sync-body p{font-size:12px;line-height:1.65;margin:10px 0}
+.ws-task-sync-body .ws-task-sync-explanation,.ws-task-sync-notice{color:#b5cbbd}
+.ws-task-sync-body dl{margin:12px 0;padding:10px 0;border-top:1px solid #294333;border-bottom:1px solid #294333}
+.ws-task-sync-body dl>div{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:8px;margin:5px 0}
+.ws-task-sync-body dt{color:#a1bdac}
+.ws-task-sync-body dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;font-size:12px}
+.ws-task-sync-warning{color:#e9ce91}
+.ws-task-sync-error{color:#ffc1b5;background:#442b253d;padding:9px;border:1px solid #805243;border-radius:5px}
+.ws-task-sync-conflicts{border-top:1px solid #40503a;padding-top:10px;margin-top:12px;color:#ebd397}
+.ws-task-sync-conflicts strong{font-size:12px}
+.ws-task-sync-conflicts ul{margin:8px 0;padding-left:18px}
+.ws-task-sync-conflicts li{margin:8px 0}
+.ws-task-sync-conflicts li>span{font-size:12px;color:#e0e9df}
+.ws-task-sync-conflicts li p{margin:3px 0}
+.ws-task-sync-body button{width:100%;margin-top:6px;font-size:13px}
+.ws-task-sync-body button:disabled{cursor:wait;opacity:.65}
+/* Confirmed state shrinks to a dot; hover, focus or opening restores the label and details. */
+.ws-task-sync--success:not([open]):not(:hover):not(:focus-within)>summary{min-height:34px;padding:8px 13px}
+.ws-task-sync--success:not([open]):not(:hover):not(:focus-within)>summary::after{display:none}
+.ws-task-sync--success:not([open]):not(:hover):not(:focus-within) .ws-task-sync-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:600px){.ws-task-sync{right:12px;bottom:12px}.ws-task-sync-body{max-height:min(55vh,380px)}}

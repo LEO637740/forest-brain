@@ -1,0 +1,76 @@
+{
+  "source_sha256": "87fc7079cbb8861def248333a6d21f1fc956001cc3404c32d1e62c88abcb36bd",
+  "preview_materials_not_baked": true,
+  "variants": [
+    {
+      "id": "V20",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "V20_LOD0.glb",
+          "triangles": 166952,
+          "bytes": 5430828
+        },
+        {
+          "lod": 1,
+          "file": "V20_LOD1.glb",
+          "triangles": 81148,
+          "bytes": 2956508
+        },
+        {
+          "lod": 2,
+          "file": "V20_LOD2.glb",
+          "triangles": 61130,
+          "bytes": 1962308
+        }
+      ]
+    },
+    {
+      "id": "V21",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "V21_LOD0.glb",
+          "triangles": 96417,
+          "bytes": 3107212
+        },
+        {
+          "lod": 1,
+          "file": "V21_LOD1.glb",
+          "triangles": 45473,
+          "bytes": 1400376
+        },
+        {
+          "lod": 2,
+          "file": "V21_LOD2.glb",
+          "triangles": 34213,
+          "bytes": 1097708
+        }
+      ]
+    },
+    {
+      "id": "V25",
+      "lods": [
+        {
+          "lod": 0,
+          "file": "V25_LOD0.glb",
+          "triangles": 167119,
+          "bytes": 5436224
+        },
+        {
+          "lod": 1,
+          "file": "V25_LOD1.glb",
+          "triangles": 81463,
+          "bytes": 2964784
+        },
+        {
+          "lod": 2,
+          "file": "V25_LOD2.glb",
+          "triangles": 61418,
+          "bytes": 1970332
+        }
+      ]
+    }
+  ],
+  "source_unchanged": true
+}

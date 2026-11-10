@@ -1,0 +1,47 @@
+.be-panel{display:grid;gap:14px}
+.be-panel h3{margin-bottom:4px}
+.be-loop{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none;counter-reset:be}
+.be-loop li{counter-increment:be;font-size:12px;color:var(--rb-secondary);padding:4px 10px;border:1px solid var(--rb-line);border-radius:14px}
+.be-loop li::before{content:counter(be) " ";color:var(--rb-accent)}
+.be-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.be-block{padding:14px;border:1px solid var(--rb-line);border-radius:6px;min-width:0}
+.be-block h4{margin:0 0 10px;font-size:14px;font-weight:500}
+.be-bar{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--rb-line)}
+.be-small{background:var(--rb-accent)}.be-big{background:var(--rb-amber)}.be-blocked{background:var(--rb-muted,#87969f)}
+.be-counts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:12px 0 0;font-size:13px}
+.be-counts dt{color:var(--rb-secondary)}.be-counts dd{margin:0}
+.be-counts dt:nth-of-type(1)::before{content:'';display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;background:var(--rb-accent)}
+.be-counts dt:nth-of-type(2)::before{content:'';display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;background:var(--rb-amber)}
+.be-counts dt:nth-of-type(3)::before{content:'';display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;background:var(--rb-muted,#87969f)}
+.be-table td.be-better{color:var(--rb-accent)}.be-table td.be-worse{color:var(--rb-danger)}
+.be-headline{font-size:13px;line-height:1.7;margin:10px 0}
+.be-ok{font-size:12px;color:var(--rb-accent)}
+.be-warn{color:var(--rb-amber);font-size:13px}
+.be-generations{margin:0;padding-left:18px;font-size:13px;line-height:1.8}
+.be-generations small{display:block;color:var(--rb-secondary);font-size:11px}
+.be-more{font-size:12px;color:var(--rb-secondary);line-height:1.7}
+.be-more summary{cursor:pointer}
+.be-evidence{margin-top:12px;padding:12px;border:1px solid var(--rb-line);border-radius:6px;font-size:12px}
+.be-evidence p{margin:0 0 8px}.be-evidence strong{margin-right:8px}
+.be-evidence.be-worse{border-color:var(--rb-amber)}
+.be-evidence ul{margin:6px 0 0;padding-left:18px;line-height:1.7}
+@media(max-width:760px){.be-grid{grid-template-columns:1fr}}
+.hl-panel{display:grid;gap:10px}.hl-panel h4{margin:8px 0 0;font-size:14px;font-weight:500}
+.hl-panel .hl-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0}
+.hl-panel .hl-stats>div{display:block;padding:10px 12px;border:1px solid var(--rb-line);border-radius:6px;min-width:0}
+.hl-panel .hl-stats dt{font-size:12px;color:var(--rb-secondary);border:0;padding:0}.hl-panel .hl-stats dd{margin:4px 0 0;font-size:20px;border:0;padding:0}
+.hl-panel .hl-stats dd small{display:block;font-size:11px;color:var(--rb-secondary);margin-top:2px}
+.hl-skills{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.hl-skills li{display:grid;gap:4px;padding:10px 12px;border:1px solid var(--rb-line);border-left-width:4px;border-radius:6px;font-size:13px}
+.hl-skills li p{margin:0;line-height:1.6}.hl-skills li small{color:var(--rb-secondary)}
+.hl-skill-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.hl-skill-head span{font-size:12px;color:var(--rb-secondary)}
+.hl-skill-active{border-left-color:var(--rb-accent)!important}.hl-skill-pending{border-left-color:var(--rb-amber)!important}.hl-skill-needs_review{border-left-color:var(--rb-danger)!important}
+.hl-skill-actions{display:flex;gap:6px;flex-wrap:wrap}
+.hl-skill-edit{display:grid;gap:6px}.hl-skill-edit input,.hl-skill-edit textarea{font:inherit;padding:6px 8px;color:inherit;background:transparent;border:1px solid var(--rb-line);border-radius:4px}
+.hl-skill-edit textarea{min-height:70px}.hl-skill-edit span{display:flex;gap:6px}
+
+.rv-table th small,.rv-table td small{display:block;margin-top:3px;color:var(--rb-secondary);font-size:11px;font-weight:400;line-height:1.5}
+.rv-table td:nth-child(2),.rv-table td:nth-child(3),.rv-table td:nth-child(4){white-space:nowrap}
+.rv-delegate>td:nth-child(5),.rv-brain_unreliable>td:nth-child(5){color:var(--rb-accent)}
+.rv-keep_brain>td:nth-child(5){color:var(--rb-amber)}
+@media(max-width:760px){.rv-table{display:block;overflow-x:auto}}

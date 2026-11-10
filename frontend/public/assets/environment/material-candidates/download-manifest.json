@@ -1,0 +1,38 @@
+[
+  {
+    "file": "dirt_Diffuse.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dirt/dirt_diff_2k.jpg",
+    "bytes": 3053062,
+    "md5": "8e6fb7316bca5840c386cb72a3f16c62"
+  },
+  {
+    "file": "dirt_nor_gl.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dirt/dirt_nor_gl_2k.jpg",
+    "bytes": 4914156,
+    "md5": "060d0ca175eeb140ac46f48bc56263ad"
+  },
+  {
+    "file": "dirt_Rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/dirt/dirt_rough_2k.jpg",
+    "bytes": 964887,
+    "md5": "420569deb8fab894119e32ed3712f7b8"
+  },
+  {
+    "file": "leaves_forest_ground_Diffuse.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/leaves_forest_ground/leaves_forest_ground_diff_2k.jpg",
+    "bytes": 4253470,
+    "md5": "9adf3721c2a5ce011e1184762e8c1a8d"
+  },
+  {
+    "file": "leaves_forest_ground_nor_gl.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/leaves_forest_ground/leaves_forest_ground_nor_gl_2k.jpg",
+    "bytes": 5273836,
+    "md5": "da3f3f6762cc0e95bd1e5919d2c38d68"
+  },
+  {
+    "file": "leaves_forest_ground_Rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/leaves_forest_ground/leaves_forest_ground_rough_2k.jpg",
+    "bytes": 2096339,
+    "md5": "b961849445499cd5c37361e766f778d1"
+  }
+]

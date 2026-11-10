@@ -1,0 +1,5 @@
+.hb-strategy-refresh{margin:12px 0;padding:12px 16px;border:1px solid var(--rb-line,#35433d);border-radius:8px;background:var(--rb-surface,#1b2227);font-size:13px;color:var(--rb-text,#e7ece9)}
+.hb-strategy-refresh>div{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hb-strategy-refresh p{margin:7px 0 0;line-height:1.6;color:var(--rb-muted,#abb8b1)}
+.hb-strategy-refresh button{padding:5px 9px;border:1px solid var(--rb-line,#35433d);border-radius:4px;background:transparent;color:inherit;cursor:pointer}
+.hb-strategy-refresh>.hb-tree-analysis-status{display:block;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--rb-line,#35433d)}

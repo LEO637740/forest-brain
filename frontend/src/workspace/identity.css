@@ -1,0 +1,75 @@
+.id-page{--rb-bg:#14191d;--rb-surface:#1b2227;--rb-raised:#232c32;--rb-line:#354048;--rb-text:#edf1f3;--rb-secondary:#b2bdc5;--rb-accent:#81d1b1;--rb-amber:#dabb7c;--rb-danger:#f1a098;
+  min-height:100vh;overflow:auto;box-sizing:border-box;padding:56px clamp(16px,5vw,72px);background:var(--rb-bg);color:var(--rb-text);font-size:14px}
+.id-head{display:flex;gap:18px;align-items:flex-start;max-width:1200px;margin:0 auto 36px}
+.id-head>svg{color:var(--rb-accent);flex-shrink:0;margin-top:6px}
+.id-head p{margin:0;font-size:12px;letter-spacing:.12em;color:var(--rb-accent)}
+.id-head h1{margin:8px 0 10px;font-size:30px;font-weight:500}
+.id-head span{color:var(--rb-secondary);line-height:1.7}
+.id-roles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1200px;margin:0 auto}
+.id-role{display:flex;flex-direction:column;gap:10px;padding:20px;border:1px solid var(--rb-line);border-radius:8px;background:var(--rb-surface);min-width:0}
+.id-role>header h2{margin:0;font-size:18px;font-weight:500}
+.id-role>header p{margin:8px 0 6px;color:var(--rb-secondary);font-size:13px;line-height:1.7;min-height:66px}
+.id-role-grower{border-top:3px solid var(--rb-amber)}.id-role-manager{border-top:3px solid var(--rb-accent)}
+.id-role-operator{border-top:3px solid #86b7e0}.id-role-executive{border-top:3px solid #c3a6e8}
+.id-account{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:13px 14px;text-align:left;border:1px solid var(--rb-line);border-radius:6px;background:var(--rb-bg);color:var(--rb-text);font:inherit;cursor:pointer}
+.id-account:hover:not(:disabled){border-color:var(--rb-accent);background:var(--rb-raised)}
+.id-account:focus-visible{outline:2px solid var(--rb-accent);outline-offset:2px}
+.id-account:disabled{opacity:.55;cursor:default}
+.id-account>span:first-child{display:grid;gap:4px;min-width:0}
+.id-account strong{font-weight:500}.id-account small{color:var(--rb-secondary);font-size:12px}
+.id-account em{font-style:normal;font-size:12px;color:var(--rb-accent);line-height:1.5}
+.id-account>svg{color:var(--rb-accent);flex-shrink:0}
+.id-error{max-width:1200px;margin:18px auto;color:var(--rb-danger)}
+.id-foot{display:flex;align-items:center;gap:8px;max-width:1200px;margin:32px auto 0;color:var(--rb-secondary);font-size:12px}
+.id-foot svg{color:var(--rb-accent)}
+@media(max-width:1100px){.id-roles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.id-page{padding:28px 16px}.id-roles{grid-template-columns:1fr}.id-role>header p{min-height:0}.id-head h1{font-size:24px}}
+
+/* Signed-in identity chip in the top bar */
+.id-chip{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--rb-secondary);white-space:nowrap}
+.id-chip strong{color:var(--rb-text);font-weight:500}
+.id-chip b{font-weight:400;color:var(--rb-accent);border:1px solid var(--rb-line);border-radius:4px;padding:2px 6px}
+.id-chip button{border:1px solid var(--rb-line);background:transparent;color:var(--rb-secondary);border-radius:4px;padding:4px 8px;font:inherit;cursor:pointer}
+.id-chip button:hover{color:var(--rb-text);border-color:var(--rb-accent)}
+@media(max-width:1200px){.id-chip>span{display:none}}
+/* Phone width: top-bar actions keep their icons and accessible names only. */
+@media(max-width:700px){.workspace-app.rb-shell .ws-topbar{gap:8px}.ws-topbar .id-chip button{font-size:0;padding:6px 8px}.workspace-app .ws-topbar .ws-brain-entry{font-size:0;gap:0}}
+@media(max-width:420px){.ws-topbar:has(.ws-brain-entry) .ws-brand strong{display:none}}
+
+/* Today's decisions: conclusions first, data behind them */
+.td-panel{margin:0 0 24px}
+.td-panel>header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px}
+.td-panel>header h2{margin:0;font-size:20px;font-weight:500}
+.td-panel>header span{font-size:12px;color:var(--rb-secondary)}
+.td-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.td-item{display:flex;flex-direction:column;gap:8px;padding:18px;border:1px solid var(--rb-line);border-left:3px solid var(--rb-line);border-radius:6px;background:var(--rb-surface);min-width:0}
+.td-item.td-high{border-left-color:var(--rb-amber)}.td-item.td-medium{border-left-color:var(--rb-accent)}
+.td-item h3{margin:0;font-size:15px;font-weight:500}
+.td-item p{margin:0;font-size:14px;line-height:1.65}
+.td-item small{color:var(--rb-secondary);font-size:12px;line-height:1.6}
+.td-item>button{align-self:flex-start;margin-top:auto;display:flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--rb-line);border-radius:5px;background:var(--rb-bg);color:var(--rb-accent);font:inherit;font-size:13px;cursor:pointer}
+.td-item>button:hover{border-color:var(--rb-accent)}
+.td-more{margin-top:24px}
+.td-more>summary{cursor:pointer;color:var(--rb-secondary);font-size:13px;padding:10px 0}
+.td-plot-trees{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px;margin-top:12px}
+.td-plot-trees button{padding:8px 6px;border:1px solid var(--rb-line);border-radius:5px;background:var(--rb-bg);color:var(--rb-text);font:inherit;font-size:12px;cursor:pointer}
+.td-plot-trees button.td-care{border-color:var(--rb-amber);color:var(--rb-amber)}
+.td-plot-trees button:hover{border-color:var(--rb-accent)}
+
+/* Compact decisions: the recommendation and action stay visible. */
+.td-reason{font-size:12px;color:var(--rb-secondary)}
+.td-reason summary{cursor:pointer;padding:2px 0}
+.td-reason p{margin:8px 0!important;font-size:12px!important;line-height:1.7!important}
+.td-item>button{margin-top:6px}
+.td-panel>header{flex-wrap:wrap}
+.dw-head{margin-bottom:22px}
+@media(max-width:640px){.td-list{grid-template-columns:minmax(0,1fr)}}
+
+.td-followup{margin-top:12px;color:var(--rb-secondary);font-size:13px}
+.td-followup>summary{cursor:pointer;padding:8px 0}
+.td-followup>.td-list{margin-top:10px}
+.td-item>p{margin:0!important;font-size:13px!important}
+.td-item>h3{margin:0!important}
+.td-item>button{margin-top:auto}
+.dw-flow:has(>button:nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:700px){.dw-flow:has(>button:nth-child(3):last-child){grid-template-columns:1fr}}

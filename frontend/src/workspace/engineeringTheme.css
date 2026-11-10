@@ -1,0 +1,47 @@
+/* Keep the fusion layout refinements; colours come from the original
+   workspace, workbench and component styles (deep blue/green palette). */
+.workspace-app.rb-shell{
+ --rb-radius:3px;
+ background:var(--rb-bg);font-variant-numeric:tabular-nums;
+}
+.workspace-app.rb-shell :is(.ws-tree-drawer,.ws-context-detail,.ws-context-header,.ws-review-dock,.ws-review-dock>header,.tf-panel,.tf-toolbar,.tf-result,.tf-tools>button,.tf-tools>details){border-radius:3px;box-shadow:none}
+.workspace-app.rb-shell .robot-list>button{border-radius:3px;box-shadow:none}
+.workspace-app.rb-shell .robot-list>button[aria-pressed=true]{box-shadow:inset 3px 0 var(--rb-accent)}
+.workspace-app.rb-shell :is(.robot-detail,.ba-shell,.ws-review){border-radius:3px}
+.workspace-app.rb-shell .ws-review-dock>header{border-bottom:1px solid var(--ui-line)}
+/* Reserve actual canvas width, so focusing an object never places it behind the panel. */
+@media(min-width:1100px){
+ .workspace-app:has(.ws-review-dock) .scene-host{width:calc(100% - 440px)!important;right:440px!important}
+ .workspace-app.rb-shell .ws-review-dock{width:440px;box-sizing:border-box;right:0;top:112px;bottom:0;max-height:none;border-width:0 0 0 1px}
+ .workspace-app:has(.tf-monitor,.tf-result) .scene-host{width:calc(100% - 450px)!important;right:450px!important}
+ .workspace-app.rb-shell :is(.tf-monitor,.tf-result){right:0;width:430px;max-height:calc(100% - 24px)}
+}
+@media(prefers-reduced-motion:reduce){.workspace-app *{scroll-behavior:auto!important;transition:none!important}}
+/* Reduce decoration; retain action icons, warnings and evidence disclosures. */
+.workspace-app.rb-shell .ws-navigation>button>svg,.workspace-app.rb-shell .robot-card-name>svg,.workspace-app.rb-shell .ws-brain-entry>svg{display:none}
+.workspace-app.rb-shell .ws-navigation>button{padding-inline:20px;gap:0}
+.workspace-app.rb-shell :is(.robot-list>button,.robot-detail,.dc-panel,.dc-source-grid article,.dw-section){border:0;border-radius:0;box-shadow:none}
+.workspace-app.rb-shell .robot-list{gap:1px;background:var(--rb-line)}
+.workspace-app.rb-shell .robot-list>button[aria-pressed=true]{border:0;box-shadow:inset 0 -3px var(--rb-accent)}
+.workspace-app.rb-shell :is(.dc-source-grid article,.robot-owned button){background:transparent;border:0;border-bottom:1px solid var(--rb-line);border-radius:0}
+.workspace-app.rb-shell :is(.dc-panel,.dw-section){border-top:1px solid var(--rb-line)}
+.workspace-app.rb-shell :is(.dc-legend span,.rb-source,.rb-data-badge,.robot-simulation,.ws-pill){background:none;border:0;border-radius:0;padding:2px 0;font-size:13px}
+.workspace-app.rb-shell :is(.robot-card-name small,.robot-card-summary,.robot-meta,.robot-records p,.robot-owned button small,.dc-source-grid p,.dc-source-grid dl,.dc-source-title span,.dc-page td small,.dc-legend,.rb-source-line,.dw-context){font-size:13px!important;line-height:1.6}
+.workspace-app.rb-shell :is(.dc-page table,.robot-current p){font-size:14px}
+.workspace-app.rb-shell :is(.dc-page th,.dc-business-kpis>div,.dc-decision-intro,.dc-strategy-evidence,.dc-record-content){border-radius:0}
+.workspace-app.rb-shell :is(.robot-eyebrow,.dw-eyebrow){letter-spacing:0;font-size:13px!important}
+.workspace-app.rb-shell :is(.ws-home-right,.ws-tree-drawer,.ws-context-detail,.ws-review-dock,.ba-shell){backdrop-filter:none;border-radius:2px;box-shadow:none}
+.workspace-app.rb-shell :is(.rb-button,.dc-page button,.robot-owned button){border-radius:2px}
+/* Quiet hierarchy: the scene is primary; detailed navigation stays in existing pages. */
+.workspace-app.rb-shell .ws-scene-heading{max-width:450px;pointer-events:none;text-shadow:0 1px 3px #0009}
+.workspace-app.rb-shell .ws-scene-heading h1{font-size:21px;line-height:1.3;margin:5px 0}
+.workspace-app.rb-shell .ws-scene-heading>span{display:none}
+.workspace-app.rb-shell .ws-scene-heading p{font-size:13px;margin-top:6px;color:#fff}
+.workspace-app.rb-shell .field-plan{max-height:calc(100% - 110px)}
+.workspace-app.rb-shell .field-task-list>button{padding:14px 0;gap:5px}
+.workspace-app.rb-shell .field-task-list>button>span{font-size:13px}
+.workspace-app.rb-shell .field-task-list>button>strong{font-size:15px;font-weight:500}
+.workspace-app.rb-shell .field-task-list>button[data-state="执行中"]>strong{font-weight:650}
+.workspace-app.rb-shell .field-task-list>button[data-state="待处理"]>span:first-child{color:#d3bb88}
+.workspace-app.rb-shell .field-count{margin:12px 0 4px}
+.workspace-app.rb-shell .rb-scope>span{white-space:nowrap}

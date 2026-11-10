@@ -1,0 +1,491 @@
+{
+  "description": "真实执行本地 Harness 得到的模拟样例；时间过期后请重新运行 npm run examples。",
+  "request": {
+    "requestId": "example-surface_unregistered",
+    "kind": "surface_action",
+    "siteId": "demo-hainan",
+    "targetSnapshotId": "target-669d4430ca9cafb8e8ec",
+    "inputSnapshot": {
+      "snapshotId": "input-f33b260539addddc8a88473b",
+      "version": 1
+    },
+    "executionMode": "simulation"
+  },
+  "context": {
+    "snapshotId": "input-f33b260539addddc8a88473b",
+    "version": 1,
+    "siteId": "demo-hainan",
+    "asOf": "2026-09-24T13:27:52.457Z",
+    "validUntil": "2026-09-24T15:27:52.457Z",
+    "executionMode": "simulation",
+    "targetSnapshot": {
+      "targetSnapshotId": "target-669d4430ca9cafb8e8ec",
+      "siteId": "demo-hainan",
+      "treeIds": [
+        "T-0012"
+      ]
+    },
+    "constraints": {
+      "minCutSlopeDeg": 20,
+      "maxCutSlopeDeg": 40,
+      "maxTappingsPerWeek": 2,
+      "ruleSetId": "demo-rules-2"
+    },
+    "modules": {
+      "trees": [
+        {
+          "treeId": "T-0012",
+          "siteId": "demo-hainan",
+          "blockId": "A",
+          "variety": "热研 7-33-97（模拟）",
+          "plantedAt": null,
+          "heightM": 10.4,
+          "circumferenceCm": 52,
+          "measuredAt": "2026-09-24T12:27:52.457Z",
+          "tappingStatus": "available",
+          "healthStatus": "watch",
+          "provenance": {
+            "sourceClass": "farmer_expert",
+            "sourceId": "demo-tree-register",
+            "mode": "simulated"
+          },
+          "quality": "valid"
+        }
+      ],
+      "weather": {
+        "siteId": "demo-hainan",
+        "observed": {
+          "observationId": "obs-weather-001",
+          "observedAt": "2026-09-24T13:22:52.457Z",
+          "receivedAt": "2026-09-24T13:23:02.457Z",
+          "airTemperatureC": 26.4,
+          "relativeHumidityPct": 84,
+          "rainfallMm": 0,
+          "rainfallPeriodMinutes": 60,
+          "provenance": {
+            "sourceClass": "sensor_device",
+            "sourceId": "demo-station-hn",
+            "mode": "simulated"
+          },
+          "quality": "valid"
+        },
+        "forecast": {
+          "forecastRunId": "forecast-hn-001",
+          "issuedAt": "2026-09-24T12:57:52.457Z",
+          "timezone": "Asia/Shanghai",
+          "steps": [
+            {
+              "validFrom": "2026-09-24T13:27:52.457Z",
+              "validTo": "2026-09-24T14:27:52.457Z",
+              "rainfallMm": 0,
+              "rainProbabilityPct": 10
+            },
+            {
+              "validFrom": "2026-09-24T14:27:52.457Z",
+              "validTo": "2026-09-24T15:27:52.457Z",
+              "rainfallMm": 0,
+              "rainProbabilityPct": 20
+            },
+            {
+              "validFrom": "2026-09-24T15:27:52.457Z",
+              "validTo": "2026-09-24T16:27:52.457Z",
+              "rainfallMm": 1.2,
+              "rainProbabilityPct": 70
+            },
+            {
+              "validFrom": "2026-09-24T16:27:52.457Z",
+              "validTo": "2026-09-24T17:27:52.457Z",
+              "rainfallMm": 3.1,
+              "rainProbabilityPct": 85
+            }
+          ],
+          "provenance": {
+            "sourceClass": "web_service",
+            "sourceId": "demo-weather-service",
+            "mode": "simulated"
+          },
+          "quality": "valid"
+        }
+      },
+      "inspection": {
+        "evidence": [
+          {
+            "evidenceId": "evidence-T-0012",
+            "treeId": "T-0012",
+            "capturedAt": "2026-09-24T13:17:52.457Z",
+            "imageUrl": null,
+            "imageWidthPx": 1920,
+            "imageHeightPx": 1080,
+            "expiresAt": null,
+            "geometryRegistered": false,
+            "detections": [
+              {
+                "detectionId": "detection-T-0012",
+                "classCode": "scar",
+                "intersectsPlannedLine": null,
+                "reviewStatus": "unreviewed",
+                "score": null,
+                "box": [
+                  0.32,
+                  0.4,
+                  0.18,
+                  0.2
+                ],
+                "coordinateConvention": "normalized_top_left_xywh"
+              }
+            ],
+            "provenance": {
+              "sourceClass": "sensor_device",
+              "sourceId": "demo-camera-hn",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          }
+        ]
+      },
+      "tapping": {
+        "panels": [
+          {
+            "panelId": "panel-T-0012",
+            "treeId": "T-0012",
+            "plannedCutSlopeDeg": 30,
+            "actualCutSlopeDeg": null,
+            "angleReference": "horizontal",
+            "cutDirection": "left_to_right",
+            "provenance": {
+              "sourceClass": "sensor_device",
+              "sourceId": "demo-panel-register",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          }
+        ]
+      },
+      "growth": {
+        "measurements": [
+          {
+            "observationId": "growth-T-0012-0",
+            "treeId": "T-0012",
+            "observedAt": "2026-06-26T13:27:52.457Z",
+            "circumferenceCm": 50.8,
+            "measurementHeightM": 1.3,
+            "provenance": {
+              "sourceClass": "sensor_device",
+              "sourceId": "demo-measurements",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "observationId": "growth-T-0012-1",
+            "treeId": "T-0012",
+            "observedAt": "2026-07-26T13:27:52.457Z",
+            "circumferenceCm": 51.2,
+            "measurementHeightM": 1.3,
+            "provenance": {
+              "sourceClass": "sensor_device",
+              "sourceId": "demo-measurements",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "observationId": "growth-T-0012-2",
+            "treeId": "T-0012",
+            "observedAt": "2026-08-25T13:27:52.457Z",
+            "circumferenceCm": 51.6,
+            "measurementHeightM": 1.3,
+            "provenance": {
+              "sourceClass": "sensor_device",
+              "sourceId": "demo-measurements",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "observationId": "growth-T-0012-3",
+            "treeId": "T-0012",
+            "observedAt": "2026-09-24T13:27:52.457Z",
+            "circumferenceCm": 52,
+            "measurementHeightM": 1.3,
+            "provenance": {
+              "sourceClass": "sensor_device",
+              "sourceId": "demo-measurements",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          }
+        ]
+      },
+      "health": {
+        "records": [
+          {
+            "recordId": "health-T-0012",
+            "treeId": "T-0012",
+            "observedAt": "2026-09-24T12:57:52.457Z",
+            "symptomCodes": [
+              "leaf_spot"
+            ],
+            "confirmedDiagnosis": null,
+            "provenance": {
+              "sourceClass": "sensor_device",
+              "sourceId": "demo-inspection",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          }
+        ]
+      },
+      "market": {
+        "instrument": "天然橡胶干胶（模拟现货）",
+        "venue": "演示行情源",
+        "currency": "CNY",
+        "priceUnit": "CNY/kg_dry_rubber",
+        "prices": [
+          {
+            "observationId": "market-0",
+            "observedAt": "2026-09-20T13:27:52.457Z",
+            "value": 14.2,
+            "provenance": {
+              "sourceClass": "web_service",
+              "sourceId": "demo-market-service",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "observationId": "market-1",
+            "observedAt": "2026-09-21T13:27:52.457Z",
+            "value": 14.4,
+            "provenance": {
+              "sourceClass": "web_service",
+              "sourceId": "demo-market-service",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "observationId": "market-2",
+            "observedAt": "2026-09-22T13:27:52.457Z",
+            "value": 14.1,
+            "provenance": {
+              "sourceClass": "web_service",
+              "sourceId": "demo-market-service",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "observationId": "market-3",
+            "observedAt": "2026-09-23T13:27:52.457Z",
+            "value": 14.5,
+            "provenance": {
+              "sourceClass": "web_service",
+              "sourceId": "demo-market-service",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "observationId": "market-4",
+            "observedAt": "2026-09-24T13:27:52.457Z",
+            "value": 14.6,
+            "provenance": {
+              "sourceClass": "web_service",
+              "sourceId": "demo-market-service",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          }
+        ],
+        "costAssumptions": {
+          "assumptionId": "cost-demo-001",
+          "costPerTreeTappingCny": 1.2,
+          "dryRubberKgPerTreeTapping": 0.12,
+          "provenance": {
+            "sourceClass": "farmer_expert",
+            "sourceId": "demo-operator-assumptions",
+            "mode": "simulated"
+          },
+          "quality": "valid"
+        }
+      },
+      "knowledge": {
+        "rules": [
+          {
+            "ruleId": "rule-tapping_angle",
+            "kind": "tapping_angle",
+            "title": "演示坡角候选",
+            "text": "以已采用坡角为基准，高湿条件演示减小 2 度；仅为软件样例，未经农艺效果验证。",
+            "version": "demo-rules-2",
+            "validUntil": "2026-09-25T13:27:52.457Z",
+            "provenance": {
+              "sourceClass": "research_partner",
+              "sourceId": "demo-research_partner",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "ruleId": "rule-growth_plan",
+            "kind": "growth_plan",
+            "title": "尺寸序列演示外推",
+            "text": "使用同一测量部位的首末样本线性外推 30 天；无概率区间，不等同生长模型。",
+            "version": "demo-rules-2",
+            "validUntil": "2026-09-25T13:27:52.457Z",
+            "provenance": {
+              "sourceClass": "research_partner",
+              "sourceId": "demo-research_partner",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "ruleId": "rule-weather_window",
+            "kind": "weather_window",
+            "title": "演示作业窗口规则",
+            "text": "现场有雨时先复核；预报雨量大于 0 或降雨概率不低于 60% 时暂缓。阈值仅供演示。",
+            "version": "demo-rules-2",
+            "validUntil": "2026-09-25T13:27:52.457Z",
+            "provenance": {
+              "sourceClass": "farmer_expert",
+              "sourceId": "demo-farmer_expert",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "ruleId": "rule-surface_action",
+            "kind": "surface_action",
+            "title": "树表复核规则",
+            "text": "附着物不自动等同跳刀；缺少配准时补拍，有伤痕或疑似病斑时安排人工评估。",
+            "version": "demo-rules-2",
+            "validUntil": "2026-09-25T13:27:52.457Z",
+            "provenance": {
+              "sourceClass": "farmer_expert",
+              "sourceId": "demo-farmer_expert",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "ruleId": "rule-market_scenario",
+            "kind": "market_scenario",
+            "title": "养护频次示例约束",
+            "text": "演示最多每周 2 次；缺成本或单次产量假设时不计算贡献。",
+            "version": "demo-rules-2",
+            "validUntil": "2026-09-25T13:27:52.457Z",
+            "provenance": {
+              "sourceClass": "farmer_expert",
+              "sourceId": "demo-farmer_expert",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          },
+          {
+            "ruleId": "rule-pest_risk",
+            "kind": "pest_risk",
+            "title": "巡查建议示例",
+            "text": "症状与高湿用于提示复核，不作确诊，不输出概率。",
+            "version": "demo-rules-2",
+            "validUntil": "2026-09-25T13:27:52.457Z",
+            "provenance": {
+              "sourceClass": "farmer_expert",
+              "sourceId": "demo-farmer_expert",
+              "mode": "simulated"
+            },
+            "quality": "valid"
+          }
+        ]
+      }
+    }
+  },
+  "result": {
+    "runId": "run-9a4ff664-ea7c-4a88-93fc-682d675ccd87",
+    "requestId": "example-surface_unregistered",
+    "status": "succeeded",
+    "updatedAt": "2026-09-24T13:27:52.457Z",
+    "strategy": {
+      "strategyId": "strategy-b430e610-780d-4617-91fc-0bd8b8b34f1a",
+      "revision": 2,
+      "runId": "run-9a4ff664-ea7c-4a88-93fc-682d675ccd87",
+      "kind": "surface_action",
+      "siteId": "demo-hainan",
+      "targetSnapshotId": "target-669d4430ca9cafb8e8ec",
+      "inputSnapshot": {
+        "snapshotId": "input-f33b260539addddc8a88473b",
+        "version": 1
+      },
+      "generatedAt": "2026-09-24T13:27:52.457Z",
+      "expiresAt": "2026-09-24T14:27:52.457Z",
+      "executionMode": "simulation",
+      "provenance": {
+        "sourceId": "harness-brain",
+        "sourceClass": "research_partner",
+        "mode": "simulated"
+      },
+      "ruleVersion": "demo-rules-2",
+      "modelVersion": null,
+      "constraintsChecked": [
+        {
+          "code": "SCHEMA",
+          "status": "pass",
+          "message": "类型与必需字段符合能力契约"
+        },
+        {
+          "code": "SCOPE_AND_EVIDENCE",
+          "status": "pass",
+          "message": "目标、证据引用及输入事实检查通过"
+        },
+        {
+          "code": "DOMAIN_CONSTRAINTS",
+          "status": "pass",
+          "message": "通过当前版本的业务约束检查"
+        },
+        {
+          "code": "BUSINESS_ADOPTION",
+          "status": "not_checked",
+          "message": "采用、授权与设备能力由业务后端另行检查"
+        }
+      ],
+      "summary": "1 棵树建议补拍或人工巡查",
+      "reasons": [
+        {
+          "text": "附着物不自动等同跳刀；缺少配准时补拍，有伤痕或疑似病斑时安排人工评估。",
+          "sourceRefs": [
+            "rule-surface_action"
+          ]
+        },
+        {
+          "text": "按本次固定快照中的相关数据形成候选；所有数字均为模拟数据或演示假设。",
+          "sourceRefs": [
+            "evidence-T-0012"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "evidence-T-0012",
+        "rule-surface_action"
+      ],
+      "proposal": {
+        "findings": [
+          {
+            "evidenceId": "evidence-T-0012",
+            "detectionId": "detection-T-0012",
+            "treeId": "T-0012",
+            "affectsCut": "unknown",
+            "action": "capture",
+            "reason": "图像与计划割线尚未配准，先补拍或复核"
+          }
+        ],
+        "followupSuggestions": [
+          {
+            "treeId": "T-0012",
+            "taskType": "capture",
+            "reason": "图像与计划割线尚未配准，先补拍或复核"
+          }
+        ]
+      }
+    }
+  }
+}

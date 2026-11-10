@@ -1,0 +1,5 @@
+{
+  "engine": "llm",
+  "provider": "ollama",
+  "model": "qwen2:7b"
+}

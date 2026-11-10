@@ -1,0 +1,6 @@
+.env
+.env.local
+var/
+data/real-sources/
+data/automatic/
+node_modules/

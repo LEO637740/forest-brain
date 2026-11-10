@@ -1,0 +1,25 @@
+{
+  "name": "rubber-harness-brain",
+  "version": "2.4.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.14.0"
+  },
+  "scripts": {
+    "start": "node start-mh.mjs",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/check.js",
+    "contracts": "node scripts/export-contracts.js",
+    "examples": "node scripts/examples.js",
+    "demo:data": "node scripts/export-park.js",
+    "demo:prepare": "node scripts/prepare-tree-views.js",
+    "demo:acceptance": "node ../scripts/run-acceptance.mjs",
+    "sources:refresh": "node scripts/refresh-sources.js",
+    "llm:verify": "node scripts/smoke-llm.js",
+    "demo:business": "node scripts/export-business.js",
+    "mh:start": "node start-mh.mjs",
+    "start:configured": "node src/server.js"
+  }
+}

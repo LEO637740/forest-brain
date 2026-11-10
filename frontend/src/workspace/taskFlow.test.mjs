@@ -1,0 +1,93 @@
+import assert from 'node:assert/strict';
+import {transitionTask,minuteOf,scheduleIssue,suggestedStart,advanceDemo,resolveSurface,currentTreeIndex,treeTaskState} from './taskFlow.ts';
+const base={id:'test',site:'hainan',title:'test',block:'B',robot:'Robot 01',start:'08:00',end:'09:00',count:2,done:0,status:'待开始',kind:'割胶',treeIndices:[50,51],dispatch:{phase:'waiting',requestId:'stable-id',history:[]}};
+assert.equal(minuteOf('08:30'),510);
+assert.ok(Number.isNaN(minuteOf('25:00')));
+assert.equal(transitionTask(base,'progress'),base);
+let t=transitionTask(base,'accept');
+assert.equal(t.dispatch.phase,'scheduled');
+t=transitionTask(t,'start');t=transitionTask(t,'pause');
+assert.equal(t.dispatch.phase,'pause-requested');
+assert.equal(transitionTask(t,'progress').done,0);
+t=transitionTask(t,'ack');assert.equal(t.dispatch.phase,'paused');
+t=transitionTask(t,'resume');assert.equal(t.dispatch.phase,'resume-requested');
+t=transitionTask(t,'ack');t=transitionTask(t,'progress');t=transitionTask(t,'progress');
+assert.equal(t.dispatch.phase,'completed');assert.equal(t.done,2);
+assert.equal(transitionTask(t,'progress'),t);
+let rejected=transitionTask(base,'reject');
+assert.equal(rejected.dispatch.phase,'failed');
+assert.equal(transitionTask(rejected,'retry').dispatch.requestId,base.dispatch.requestId);
+let cancelled=transitionTask(transitionTask(base,'cancel'),'ack');
+assert.equal(cancelled.status,'已取消');
+assert.equal(transitionTask(cancelled,'start'),cancelled);
+assert.ok(scheduleIssue([base],'Robot 01','08:00',2));
+assert.ok(scheduleIssue([base],'Robot 02','08:00',2,[50]));
+assert.equal(scheduleIssue([base],'Robot 02','08:00',2,[70]),'');
+assert.equal(scheduleIssue([cancelled],'Robot 01','08:00',2,[50]),'');
+assert.ok(scheduleIssue([],'Robot 01','23:59',2));
+assert.equal(suggestedStart([base],'Robot 01',2),'06:00');
+console.log('PASS: state guards, receipt ordering, completion, retry identity, cancellation, robot/tree conflicts, invalid time');
+let auto={...base,count:1,dispatch:{...base.dispatch,auto:{startedAt:0,nextAt:1000,stage:'travel'}}};
+assert.equal(advanceDemo(auto,999),auto);
+auto=advanceDemo(auto,1000);assert.equal(auto.dispatch.phase,'scheduled');
+auto=advanceDemo(auto,2000);assert.equal(auto.dispatch.phase,'running');
+assert.equal(auto.done,0);auto=advanceDemo(auto,5000);assert.equal(auto.dispatch.auto.stage,'work');
+auto=advanceDemo(auto,7500);assert.equal(auto.dispatch.phase,'completed');assert.equal(auto.done,1);
+assert.equal(advanceDemo(auto,999999),auto);
+const paused={...base,dispatch:{...base.dispatch,phase:'paused',auto:{nextAt:0,startedAt:0,stage:'work'}}};
+assert.equal(advanceDemo(paused,999999),paused);
+assert.equal(advanceDemo(base,999999),base);
+console.log('PASS: automatic receipt/travel/work/completion; paused, terminal and non-auto tasks stay unchanged');
+const cancelling=transitionTask({...base,dispatch:{...base.dispatch,auto:{nextAt:0,startedAt:0,stage:'travel'}}},'cancel');
+assert.equal(advanceDemo(cancelling,1000).dispatch.phase,'cancelled');
+console.log('PASS: automatic cancellation acknowledgement');
+const surfaceBase={...base,dispatch:{...base.dispatch,phase:'running',demoSurfaceTree:50,auto:{nextAt:0,startedAt:0,stage:'travel'}}};
+const review=advanceDemo(surfaceBase,1000);
+assert.equal(review.dispatch.phase,'review');assert.equal(review.done,0);
+assert.equal(currentTreeIndex(review),50);
+assert.equal(advanceDemo(review,1000000),review);
+assert.equal(transitionTask(review,'resume'),review);
+assert.equal(transitionTask(review,'progress'),review);
+let adopted=resolveSurface(review,'adopt',2000);
+assert.equal(adopted.dispatch.phase,'running');assert.equal(adopted.dispatch.auto.stage,'work');
+assert.equal(resolveSurface(adopted,'skip',2001),adopted);
+adopted=advanceDemo(adopted,4500);
+assert.equal(adopted.done,1);assert.equal(adopted.dispatch.incident.status,'completed');
+assert.equal(currentTreeIndex(adopted),51);
+adopted=advanceDemo(adopted,7500);assert.equal(adopted.dispatch.phase,'running');
+adopted=advanceDemo(adopted,10000);assert.equal(adopted.dispatch.phase,'completed');
+let skipped=resolveSurface(review,'skip',2000);
+assert.equal(skipped.done,0);assert.deepEqual(skipped.dispatch.skipped,[50]);assert.equal(currentTreeIndex(skipped),51);
+assert.equal(treeTaskState(skipped,50),'已跳过 · 待复查');assert.equal(treeTaskState(skipped,51),'机器人正在前往');
+skipped=advanceDemo(skipped,4500);skipped=advanceDemo(skipped,7000);
+assert.equal(skipped.dispatch.phase,'completed');assert.equal(skipped.done,1);
+assert.equal(treeTaskState(skipped,51),'已完成割胶');
+assert.equal(resolveSurface({...review,count:1,treeIndices:[50]},'skip',2000).dispatch.phase,'completed');
+let rephoto=resolveSurface(review,'recapture',2000);
+assert.equal(rephoto.dispatch.phase,'recapturing');assert.equal(resolveSurface(rephoto,'adopt',2001),rephoto);
+rephoto=advanceDemo(JSON.parse(JSON.stringify(rephoto)),5000);
+assert.equal(rephoto.dispatch.phase,'review');assert.equal(rephoto.dispatch.incident.captures,2);assert.equal(currentTreeIndex(rephoto),50);
+assert.equal(advanceDemo(rephoto,999999),rephoto);
+const cancelReview=advanceDemo(transitionTask(review,'cancel'),2000);
+assert.equal(cancelReview.dispatch.phase,'cancelled');assert.equal(cancelReview.dispatch.incident.status,'cancelled');
+assert.equal(resolveSurface(cancelReview,'adopt'),cancelReview);
+console.log('PASS: surface incident gate, adopt/resume, skip accounting, recapture/reload, duplicate decisions, cancellation');
+
+// All simulated receipts use the supplied clock, including acknowledgement and incident completion.
+const fixedNow=Date.parse('2026-10-17T00:00:00.000Z');
+for(const [phase,stage,expected] of [
+ ['waiting','travel','scheduled'],['scheduled','travel','running'],
+ ['pause-requested','work','paused'],['resume-requested','work','running'],
+ ['cancel-requested','travel','cancelled'],['running','work','completed']
+]){
+ const input={...base,count:1,treeIndices:[50],dispatch:{...base.dispatch,phase,auto:{nextAt:fixedNow,startedAt:fixedNow-1000,stage}}};
+ const output=advanceDemo(input,fixedNow);
+ assert.equal(output.dispatch.phase,expected);
+ assert.equal(output.dispatch.history.at(-1).time,new Date(fixedNow).toISOString(),phase);
+ assert.deepEqual(advanceDemo(input,fixedNow),output,`repeated ${phase} fixture must be deterministic`);
+}
+const fixedAdopted=resolveSurface(advanceDemo(surfaceBase,fixedNow),'adopt',fixedNow+1000);
+const fixedCompleted=advanceDemo(fixedAdopted,fixedNow+3500);
+assert.equal(fixedCompleted.dispatch.incident.completedAt,new Date(fixedNow+3500).toISOString());
+assert.equal(fixedCompleted.dispatch.history.at(-1).time,new Date(fixedNow+3500).toISOString());
+console.log('PASS: supplied demo clock controls every transition receipt and surface completion');

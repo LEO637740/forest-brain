@@ -1,0 +1,1329 @@
+{
+  "preparedAt": "2026-11-06T13:19:37.064Z",
+  "siteId": "demo-hainan",
+  "dataMode": "mixed_demo",
+  "reason": "scheduled",
+  "jobs": [
+    {
+      "scenarioId": "morning",
+      "title": "① 早间：A 区天气窗口",
+      "siteId": "demo-hainan",
+      "dataMode": "mixed_demo",
+      "runId": "run-79a11e98-bac6-46f5-a83d-c86cccc3b988",
+      "requestId": "demo-a8a139e7-287c-4952-b119-d183e82d76f5-morning",
+      "status": "queued",
+      "created": true,
+      "key": "morning"
+    },
+    {
+      "scenarioId": "rain",
+      "title": "② 半小时后：降雨预报更新",
+      "siteId": "demo-hainan",
+      "dataMode": "mixed_demo",
+      "runId": "run-0340a2a9-91cc-4f23-8179-4aed00c8cadb",
+      "requestId": "demo-57054d28-a96a-43e9-abfa-bace0f793a9c-rain",
+      "status": "queued",
+      "created": true,
+      "key": "rain"
+    },
+    {
+      "scenarioId": "surface",
+      "title": "③ 树群：伤痕、结节、鸟粪、泥巴与补拍",
+      "siteId": "demo-hainan",
+      "dataMode": "mixed_demo",
+      "runId": "run-dea18594-0182-4b70-bea9-76920cf5e12d",
+      "requestId": "demo-0ec07a9e-1c2b-474d-bb93-9abbee3cf73e-surface",
+      "status": "queued",
+      "created": true,
+      "key": "surface"
+    },
+    {
+      "scenarioId": "missing",
+      "title": "④ 缺数据：T-0042 暂不出角度",
+      "siteId": "demo-hainan",
+      "dataMode": "mixed_demo",
+      "runId": "run-3c46c874-06bc-4717-a0f2-2d1149915624",
+      "requestId": "demo-84e79392-c353-49c3-a00b-953503eb1919-missing",
+      "status": "queued",
+      "created": true,
+      "key": "missing"
+    },
+    {
+      "scenarioId": "resting",
+      "title": "⑤ 休割树：T-0031 阻止角度建议",
+      "siteId": "demo-hainan",
+      "dataMode": "mixed_demo",
+      "runId": "run-0e4a999e-d26a-45e9-b84c-91e7f8261660",
+      "requestId": "demo-0b958700-0bd0-4439-9aaa-b2db66242bd8-resting",
+      "status": "queued",
+      "created": true,
+      "key": "resting"
+    },
+    {
+      "scenarioId": "growth",
+      "title": "⑥ 生长：不同树的历史趋势",
+      "siteId": "demo-hainan",
+      "dataMode": "mixed_demo",
+      "runId": "run-e9eb77b8-6b97-41f2-ae9f-2555c608cc79",
+      "requestId": "demo-e8bb5cbd-b711-4c7d-ab15-495c7174749b-growth",
+      "status": "queued",
+      "created": true,
+      "key": "growth"
+    },
+    {
+      "scenarioId": "health",
+      "title": "⑦ 巡查：有症状与正常对照",
+      "siteId": "demo-hainan",
+      "dataMode": "mixed_demo",
+      "runId": "run-736ea38a-d3b6-482e-89f0-dd52e65dc0a6",
+      "requestId": "demo-6fc4870d-d6ac-47b1-bb3e-854d91b3df6a-health",
+      "status": "queued",
+      "created": true,
+      "key": "health"
+    },
+    {
+      "runId": "run-a5ea5e2a-21c0-41e0-9bfd-03bfd5eb9eb2",
+      "requestId": "ui-mw5049sg-market",
+      "status": "queued",
+      "key": "market",
+      "title": "market"
+    },
+    {
+      "runId": "run-5e58ea8c-70fa-4595-83c0-c1ae7784febb",
+      "requestId": "ui-mw5049sg-park-health",
+      "status": "queued",
+      "key": "park-health",
+      "title": "park-health"
+    },
+    {
+      "runId": "run-62d0c336-9924-47e5-881f-9ce0481b85c5",
+      "requestId": "ui-mw5049sg-industry",
+      "status": "queued",
+      "key": "industry",
+      "title": "行业与经营 · 规则演示"
+    },
+    {
+      "runId": "run-30c76ba7-847d-4ba3-8426-667bb43f0042",
+      "requestId": "ui-reference-mw5049sg",
+      "status": "queued",
+      "key": "weather-reference",
+      "title": "参考点预报排程模拟"
+    }
+  ],
+  "trees": [
+    {
+      "objectName": "Tree_T-0001",
+      "treeId": "T-0001",
+      "siteId": "demo-hainan",
+      "label": "T-0001 · normal"
+    },
+    {
+      "objectName": "Tree_T-0002",
+      "treeId": "T-0002",
+      "siteId": "demo-hainan",
+      "label": "T-0002 · normal"
+    },
+    {
+      "objectName": "Tree_T-0003",
+      "treeId": "T-0003",
+      "siteId": "demo-hainan",
+      "label": "T-0003 · normal"
+    },
+    {
+      "objectName": "Tree_T-0004",
+      "treeId": "T-0004",
+      "siteId": "demo-hainan",
+      "label": "T-0004 · scar"
+    },
+    {
+      "objectName": "Tree_T-0005",
+      "treeId": "T-0005",
+      "siteId": "demo-hainan",
+      "label": "T-0005 · lesion"
+    },
+    {
+      "objectName": "Tree_T-0006",
+      "treeId": "T-0006",
+      "siteId": "demo-hainan",
+      "label": "T-0006 · unregistered"
+    },
+    {
+      "objectName": "Tree_T-0007",
+      "treeId": "T-0007",
+      "siteId": "demo-hainan",
+      "label": "T-0007 · normal"
+    },
+    {
+      "objectName": "Tree_T-0008",
+      "treeId": "T-0008",
+      "siteId": "demo-hainan",
+      "label": "T-0008 · normal"
+    },
+    {
+      "objectName": "Tree_T-0009",
+      "treeId": "T-0009",
+      "siteId": "demo-hainan",
+      "label": "T-0009 · normal"
+    },
+    {
+      "objectName": "Tree_T-0010",
+      "treeId": "T-0010",
+      "siteId": "demo-hainan",
+      "label": "T-0010 · normal"
+    },
+    {
+      "objectName": "Tree_T-0011",
+      "treeId": "T-0011",
+      "siteId": "demo-hainan",
+      "label": "T-0011 · normal"
+    },
+    {
+      "objectName": "Tree_T-0012",
+      "treeId": "T-0012",
+      "siteId": "demo-hainan",
+      "label": "T-0012 · scar"
+    },
+    {
+      "objectName": "Tree_T-0013",
+      "treeId": "T-0013",
+      "siteId": "demo-hainan",
+      "label": "T-0013 · normal"
+    },
+    {
+      "objectName": "Tree_T-0014",
+      "treeId": "T-0014",
+      "siteId": "demo-hainan",
+      "label": "T-0014 · normal"
+    },
+    {
+      "objectName": "Tree_T-0015",
+      "treeId": "T-0015",
+      "siteId": "demo-hainan",
+      "label": "T-0015 · normal"
+    },
+    {
+      "objectName": "Tree_T-0016",
+      "treeId": "T-0016",
+      "siteId": "demo-hainan",
+      "label": "T-0016 · normal"
+    },
+    {
+      "objectName": "Tree_T-0017",
+      "treeId": "T-0017",
+      "siteId": "demo-hainan",
+      "label": "T-0017 · normal"
+    },
+    {
+      "objectName": "Tree_T-0018",
+      "treeId": "T-0018",
+      "siteId": "demo-hainan",
+      "label": "T-0018 · nodule"
+    },
+    {
+      "objectName": "Tree_T-0019",
+      "treeId": "T-0019",
+      "siteId": "demo-hainan",
+      "label": "T-0019 · normal"
+    },
+    {
+      "objectName": "Tree_T-0020",
+      "treeId": "T-0020",
+      "siteId": "demo-hainan",
+      "label": "T-0020 · normal"
+    },
+    {
+      "objectName": "Tree_T-0021",
+      "treeId": "T-0021",
+      "siteId": "demo-hainan",
+      "label": "T-0021 · normal"
+    },
+    {
+      "objectName": "Tree_T-0022",
+      "treeId": "T-0022",
+      "siteId": "demo-hainan",
+      "label": "T-0022 · normal"
+    },
+    {
+      "objectName": "Tree_T-0023",
+      "treeId": "T-0023",
+      "siteId": "demo-hainan",
+      "label": "T-0023 · normal"
+    },
+    {
+      "objectName": "Tree_T-0024",
+      "treeId": "T-0024",
+      "siteId": "demo-hainan",
+      "label": "T-0024 · normal"
+    },
+    {
+      "objectName": "Tree_T-0025",
+      "treeId": "T-0025",
+      "siteId": "demo-hainan",
+      "label": "T-0025 · normal"
+    },
+    {
+      "objectName": "Tree_T-0026",
+      "treeId": "T-0026",
+      "siteId": "demo-hainan",
+      "label": "T-0026 · normal"
+    },
+    {
+      "objectName": "Tree_T-0027",
+      "treeId": "T-0027",
+      "siteId": "demo-hainan",
+      "label": "T-0027 · bird_dropping"
+    },
+    {
+      "objectName": "Tree_T-0028",
+      "treeId": "T-0028",
+      "siteId": "demo-hainan",
+      "label": "T-0028 · normal"
+    },
+    {
+      "objectName": "Tree_T-0029",
+      "treeId": "T-0029",
+      "siteId": "demo-hainan",
+      "label": "T-0029 · normal"
+    },
+    {
+      "objectName": "Tree_T-0030",
+      "treeId": "T-0030",
+      "siteId": "demo-hainan",
+      "label": "T-0030 · normal"
+    },
+    {
+      "objectName": "Tree_T-0031",
+      "treeId": "T-0031",
+      "siteId": "demo-hainan",
+      "label": "T-0031 · resting"
+    },
+    {
+      "objectName": "Tree_T-0032",
+      "treeId": "T-0032",
+      "siteId": "demo-hainan",
+      "label": "T-0032 · normal"
+    },
+    {
+      "objectName": "Tree_T-0033",
+      "treeId": "T-0033",
+      "siteId": "demo-hainan",
+      "label": "T-0033 · normal"
+    },
+    {
+      "objectName": "Tree_T-0034",
+      "treeId": "T-0034",
+      "siteId": "demo-hainan",
+      "label": "T-0034 · normal"
+    },
+    {
+      "objectName": "Tree_T-0035",
+      "treeId": "T-0035",
+      "siteId": "demo-hainan",
+      "label": "T-0035 · normal"
+    },
+    {
+      "objectName": "Tree_T-0036",
+      "treeId": "T-0036",
+      "siteId": "demo-hainan",
+      "label": "T-0036 · normal"
+    },
+    {
+      "objectName": "Tree_T-0037",
+      "treeId": "T-0037",
+      "siteId": "demo-hainan",
+      "label": "T-0037 · normal"
+    },
+    {
+      "objectName": "Tree_T-0038",
+      "treeId": "T-0038",
+      "siteId": "demo-hainan",
+      "label": "T-0038 · mud"
+    },
+    {
+      "objectName": "Tree_T-0039",
+      "treeId": "T-0039",
+      "siteId": "demo-hainan",
+      "label": "T-0039 · normal"
+    },
+    {
+      "objectName": "Tree_T-0040",
+      "treeId": "T-0040",
+      "siteId": "demo-hainan",
+      "label": "T-0040 · normal"
+    },
+    {
+      "objectName": "Tree_T-0041",
+      "treeId": "T-0041",
+      "siteId": "demo-hainan",
+      "label": "T-0041 · normal"
+    },
+    {
+      "objectName": "Tree_T-0042",
+      "treeId": "T-0042",
+      "siteId": "demo-hainan",
+      "label": "T-0042 · missing"
+    },
+    {
+      "objectName": "Tree_T-0043",
+      "treeId": "T-0043",
+      "siteId": "demo-hainan",
+      "label": "T-0043 · normal"
+    },
+    {
+      "objectName": "Tree_T-0044",
+      "treeId": "T-0044",
+      "siteId": "demo-hainan",
+      "label": "T-0044 · normal"
+    },
+    {
+      "objectName": "Tree_T-0045",
+      "treeId": "T-0045",
+      "siteId": "demo-hainan",
+      "label": "T-0045 · normal"
+    },
+    {
+      "objectName": "Tree_T-0046",
+      "treeId": "T-0046",
+      "siteId": "demo-hainan",
+      "label": "T-0046 · normal"
+    },
+    {
+      "objectName": "Tree_T-0047",
+      "treeId": "T-0047",
+      "siteId": "demo-hainan",
+      "label": "T-0047 · normal"
+    },
+    {
+      "objectName": "Tree_T-0048",
+      "treeId": "T-0048",
+      "siteId": "demo-hainan",
+      "label": "T-0048 · normal"
+    },
+    {
+      "objectName": "Tree_T-0049",
+      "treeId": "T-0049",
+      "siteId": "demo-hainan",
+      "label": "T-0049 · normal"
+    },
+    {
+      "objectName": "Tree_T-0050",
+      "treeId": "T-0050",
+      "siteId": "demo-hainan",
+      "label": "T-0050 · normal"
+    },
+    {
+      "objectName": "Tree_T-0051",
+      "treeId": "T-0051",
+      "siteId": "demo-hainan",
+      "label": "T-0051 · normal"
+    },
+    {
+      "objectName": "Tree_T-0052",
+      "treeId": "T-0052",
+      "siteId": "demo-hainan",
+      "label": "T-0052 · normal"
+    },
+    {
+      "objectName": "Tree_T-0053",
+      "treeId": "T-0053",
+      "siteId": "demo-hainan",
+      "label": "T-0053 · normal"
+    },
+    {
+      "objectName": "Tree_T-0054",
+      "treeId": "T-0054",
+      "siteId": "demo-hainan",
+      "label": "T-0054 · normal"
+    },
+    {
+      "objectName": "Tree_T-0055",
+      "treeId": "T-0055",
+      "siteId": "demo-hainan",
+      "label": "T-0055 · normal"
+    },
+    {
+      "objectName": "Tree_T-0056",
+      "treeId": "T-0056",
+      "siteId": "demo-hainan",
+      "label": "T-0056 · normal"
+    },
+    {
+      "objectName": "Tree_T-0057",
+      "treeId": "T-0057",
+      "siteId": "demo-hainan",
+      "label": "T-0057 · normal"
+    },
+    {
+      "objectName": "Tree_T-0058",
+      "treeId": "T-0058",
+      "siteId": "demo-hainan",
+      "label": "T-0058 · normal"
+    },
+    {
+      "objectName": "Tree_T-0059",
+      "treeId": "T-0059",
+      "siteId": "demo-hainan",
+      "label": "T-0059 · normal"
+    },
+    {
+      "objectName": "Tree_T-0060",
+      "treeId": "T-0060",
+      "siteId": "demo-hainan",
+      "label": "T-0060 · normal"
+    },
+    {
+      "objectName": "Tree_T-0061",
+      "treeId": "T-0061",
+      "siteId": "demo-hainan",
+      "label": "T-0061 · normal"
+    },
+    {
+      "objectName": "Tree_T-0062",
+      "treeId": "T-0062",
+      "siteId": "demo-hainan",
+      "label": "T-0062 · normal"
+    },
+    {
+      "objectName": "Tree_T-0063",
+      "treeId": "T-0063",
+      "siteId": "demo-hainan",
+      "label": "T-0063 · normal"
+    },
+    {
+      "objectName": "Tree_T-0064",
+      "treeId": "T-0064",
+      "siteId": "demo-hainan",
+      "label": "T-0064 · normal"
+    },
+    {
+      "objectName": "Tree_T-0065",
+      "treeId": "T-0065",
+      "siteId": "demo-hainan",
+      "label": "T-0065 · normal"
+    },
+    {
+      "objectName": "Tree_T-0066",
+      "treeId": "T-0066",
+      "siteId": "demo-hainan",
+      "label": "T-0066 · normal"
+    },
+    {
+      "objectName": "Tree_T-0067",
+      "treeId": "T-0067",
+      "siteId": "demo-hainan",
+      "label": "T-0067 · normal"
+    },
+    {
+      "objectName": "Tree_T-0068",
+      "treeId": "T-0068",
+      "siteId": "demo-hainan",
+      "label": "T-0068 · normal"
+    },
+    {
+      "objectName": "Tree_T-0069",
+      "treeId": "T-0069",
+      "siteId": "demo-hainan",
+      "label": "T-0069 · normal"
+    },
+    {
+      "objectName": "Tree_T-0070",
+      "treeId": "T-0070",
+      "siteId": "demo-hainan",
+      "label": "T-0070 · normal"
+    },
+    {
+      "objectName": "Tree_T-0071",
+      "treeId": "T-0071",
+      "siteId": "demo-hainan",
+      "label": "T-0071 · normal"
+    },
+    {
+      "objectName": "Tree_T-0072",
+      "treeId": "T-0072",
+      "siteId": "demo-hainan",
+      "label": "T-0072 · normal"
+    },
+    {
+      "objectName": "Tree_T-0073",
+      "treeId": "T-0073",
+      "siteId": "demo-hainan",
+      "label": "T-0073 · normal"
+    },
+    {
+      "objectName": "Tree_T-0074",
+      "treeId": "T-0074",
+      "siteId": "demo-hainan",
+      "label": "T-0074 · normal"
+    },
+    {
+      "objectName": "Tree_T-0075",
+      "treeId": "T-0075",
+      "siteId": "demo-hainan",
+      "label": "T-0075 · normal"
+    },
+    {
+      "objectName": "Tree_T-0076",
+      "treeId": "T-0076",
+      "siteId": "demo-hainan",
+      "label": "T-0076 · normal"
+    },
+    {
+      "objectName": "Tree_T-0077",
+      "treeId": "T-0077",
+      "siteId": "demo-hainan",
+      "label": "T-0077 · normal"
+    },
+    {
+      "objectName": "Tree_T-0078",
+      "treeId": "T-0078",
+      "siteId": "demo-hainan",
+      "label": "T-0078 · normal"
+    },
+    {
+      "objectName": "Tree_T-0079",
+      "treeId": "T-0079",
+      "siteId": "demo-hainan",
+      "label": "T-0079 · normal"
+    },
+    {
+      "objectName": "Tree_T-0080",
+      "treeId": "T-0080",
+      "siteId": "demo-hainan",
+      "label": "T-0080 · normal"
+    },
+    {
+      "objectName": "Tree_T-0081",
+      "treeId": "T-0081",
+      "siteId": "demo-hainan",
+      "label": "T-0081 · normal"
+    },
+    {
+      "objectName": "Tree_T-0082",
+      "treeId": "T-0082",
+      "siteId": "demo-hainan",
+      "label": "T-0082 · normal"
+    },
+    {
+      "objectName": "Tree_T-0083",
+      "treeId": "T-0083",
+      "siteId": "demo-hainan",
+      "label": "T-0083 · normal"
+    },
+    {
+      "objectName": "Tree_T-0084",
+      "treeId": "T-0084",
+      "siteId": "demo-hainan",
+      "label": "T-0084 · normal"
+    },
+    {
+      "objectName": "Tree_T-0085",
+      "treeId": "T-0085",
+      "siteId": "demo-hainan",
+      "label": "T-0085 · normal"
+    },
+    {
+      "objectName": "Tree_T-0086",
+      "treeId": "T-0086",
+      "siteId": "demo-hainan",
+      "label": "T-0086 · normal"
+    },
+    {
+      "objectName": "Tree_T-0087",
+      "treeId": "T-0087",
+      "siteId": "demo-hainan",
+      "label": "T-0087 · normal"
+    },
+    {
+      "objectName": "Tree_T-0088",
+      "treeId": "T-0088",
+      "siteId": "demo-hainan",
+      "label": "T-0088 · normal"
+    },
+    {
+      "objectName": "Tree_T-0089",
+      "treeId": "T-0089",
+      "siteId": "demo-hainan",
+      "label": "T-0089 · normal"
+    },
+    {
+      "objectName": "Tree_T-0090",
+      "treeId": "T-0090",
+      "siteId": "demo-hainan",
+      "label": "T-0090 · normal"
+    },
+    {
+      "objectName": "Tree_T-0091",
+      "treeId": "T-0091",
+      "siteId": "demo-hainan",
+      "label": "T-0091 · normal"
+    },
+    {
+      "objectName": "Tree_T-0092",
+      "treeId": "T-0092",
+      "siteId": "demo-hainan",
+      "label": "T-0092 · normal"
+    },
+    {
+      "objectName": "Tree_T-0093",
+      "treeId": "T-0093",
+      "siteId": "demo-hainan",
+      "label": "T-0093 · normal"
+    },
+    {
+      "objectName": "Tree_T-0094",
+      "treeId": "T-0094",
+      "siteId": "demo-hainan",
+      "label": "T-0094 · normal"
+    },
+    {
+      "objectName": "Tree_T-0095",
+      "treeId": "T-0095",
+      "siteId": "demo-hainan",
+      "label": "T-0095 · normal"
+    },
+    {
+      "objectName": "Tree_T-0096",
+      "treeId": "T-0096",
+      "siteId": "demo-hainan",
+      "label": "T-0096 · normal"
+    },
+    {
+      "objectName": "Tree_T-0097",
+      "treeId": "T-0097",
+      "siteId": "demo-hainan",
+      "label": "T-0097 · normal"
+    },
+    {
+      "objectName": "Tree_T-0098",
+      "treeId": "T-0098",
+      "siteId": "demo-hainan",
+      "label": "T-0098 · normal"
+    },
+    {
+      "objectName": "Tree_T-0099",
+      "treeId": "T-0099",
+      "siteId": "demo-hainan",
+      "label": "T-0099 · normal"
+    },
+    {
+      "objectName": "Tree_T-0100",
+      "treeId": "T-0100",
+      "siteId": "demo-hainan",
+      "label": "T-0100 · normal"
+    },
+    {
+      "objectName": "Tree_T-0101",
+      "treeId": "T-0101",
+      "siteId": "demo-hainan",
+      "label": "T-0101 · normal"
+    },
+    {
+      "objectName": "Tree_T-0102",
+      "treeId": "T-0102",
+      "siteId": "demo-hainan",
+      "label": "T-0102 · normal"
+    },
+    {
+      "objectName": "Tree_T-0103",
+      "treeId": "T-0103",
+      "siteId": "demo-hainan",
+      "label": "T-0103 · normal"
+    },
+    {
+      "objectName": "Tree_T-0104",
+      "treeId": "T-0104",
+      "siteId": "demo-hainan",
+      "label": "T-0104 · normal"
+    },
+    {
+      "objectName": "Tree_T-0105",
+      "treeId": "T-0105",
+      "siteId": "demo-hainan",
+      "label": "T-0105 · normal"
+    },
+    {
+      "objectName": "Tree_T-0106",
+      "treeId": "T-0106",
+      "siteId": "demo-hainan",
+      "label": "T-0106 · normal"
+    },
+    {
+      "objectName": "Tree_T-0107",
+      "treeId": "T-0107",
+      "siteId": "demo-hainan",
+      "label": "T-0107 · normal"
+    },
+    {
+      "objectName": "Tree_T-0108",
+      "treeId": "T-0108",
+      "siteId": "demo-hainan",
+      "label": "T-0108 · normal"
+    },
+    {
+      "objectName": "Tree_T-0109",
+      "treeId": "T-0109",
+      "siteId": "demo-hainan",
+      "label": "T-0109 · normal"
+    },
+    {
+      "objectName": "Tree_T-0110",
+      "treeId": "T-0110",
+      "siteId": "demo-hainan",
+      "label": "T-0110 · normal"
+    },
+    {
+      "objectName": "Tree_T-0111",
+      "treeId": "T-0111",
+      "siteId": "demo-hainan",
+      "label": "T-0111 · normal"
+    },
+    {
+      "objectName": "Tree_T-0112",
+      "treeId": "T-0112",
+      "siteId": "demo-hainan",
+      "label": "T-0112 · normal"
+    },
+    {
+      "objectName": "Tree_T-0113",
+      "treeId": "T-0113",
+      "siteId": "demo-hainan",
+      "label": "T-0113 · normal"
+    },
+    {
+      "objectName": "Tree_T-0114",
+      "treeId": "T-0114",
+      "siteId": "demo-hainan",
+      "label": "T-0114 · normal"
+    },
+    {
+      "objectName": "Tree_T-0115",
+      "treeId": "T-0115",
+      "siteId": "demo-hainan",
+      "label": "T-0115 · normal"
+    },
+    {
+      "objectName": "Tree_T-0116",
+      "treeId": "T-0116",
+      "siteId": "demo-hainan",
+      "label": "T-0116 · normal"
+    },
+    {
+      "objectName": "Tree_T-0117",
+      "treeId": "T-0117",
+      "siteId": "demo-hainan",
+      "label": "T-0117 · normal"
+    },
+    {
+      "objectName": "Tree_T-0118",
+      "treeId": "T-0118",
+      "siteId": "demo-hainan",
+      "label": "T-0118 · normal"
+    },
+    {
+      "objectName": "Tree_T-0119",
+      "treeId": "T-0119",
+      "siteId": "demo-hainan",
+      "label": "T-0119 · normal"
+    },
+    {
+      "objectName": "Tree_T-0120",
+      "treeId": "T-0120",
+      "siteId": "demo-hainan",
+      "label": "T-0120 · normal"
+    },
+    {
+      "objectName": "Tree_T-0121",
+      "treeId": "T-0121",
+      "siteId": "demo-hainan",
+      "label": "T-0121 · normal"
+    },
+    {
+      "objectName": "Tree_T-0122",
+      "treeId": "T-0122",
+      "siteId": "demo-hainan",
+      "label": "T-0122 · normal"
+    },
+    {
+      "objectName": "Tree_T-0123",
+      "treeId": "T-0123",
+      "siteId": "demo-hainan",
+      "label": "T-0123 · normal"
+    },
+    {
+      "objectName": "Tree_T-0124",
+      "treeId": "T-0124",
+      "siteId": "demo-hainan",
+      "label": "T-0124 · normal"
+    },
+    {
+      "objectName": "Tree_T-0125",
+      "treeId": "T-0125",
+      "siteId": "demo-hainan",
+      "label": "T-0125 · normal"
+    },
+    {
+      "objectName": "Tree_T-0126",
+      "treeId": "T-0126",
+      "siteId": "demo-hainan",
+      "label": "T-0126 · normal"
+    },
+    {
+      "objectName": "Tree_T-0127",
+      "treeId": "T-0127",
+      "siteId": "demo-hainan",
+      "label": "T-0127 · normal"
+    },
+    {
+      "objectName": "Tree_T-0128",
+      "treeId": "T-0128",
+      "siteId": "demo-hainan",
+      "label": "T-0128 · normal"
+    },
+    {
+      "objectName": "Tree_T-0129",
+      "treeId": "T-0129",
+      "siteId": "demo-hainan",
+      "label": "T-0129 · normal"
+    },
+    {
+      "objectName": "Tree_T-0130",
+      "treeId": "T-0130",
+      "siteId": "demo-hainan",
+      "label": "T-0130 · normal"
+    },
+    {
+      "objectName": "Tree_T-0131",
+      "treeId": "T-0131",
+      "siteId": "demo-hainan",
+      "label": "T-0131 · normal"
+    },
+    {
+      "objectName": "Tree_T-0132",
+      "treeId": "T-0132",
+      "siteId": "demo-hainan",
+      "label": "T-0132 · normal"
+    },
+    {
+      "objectName": "Tree_T-0133",
+      "treeId": "T-0133",
+      "siteId": "demo-hainan",
+      "label": "T-0133 · normal"
+    },
+    {
+      "objectName": "Tree_T-0134",
+      "treeId": "T-0134",
+      "siteId": "demo-hainan",
+      "label": "T-0134 · normal"
+    },
+    {
+      "objectName": "Tree_T-0135",
+      "treeId": "T-0135",
+      "siteId": "demo-hainan",
+      "label": "T-0135 · normal"
+    },
+    {
+      "objectName": "Tree_T-0136",
+      "treeId": "T-0136",
+      "siteId": "demo-hainan",
+      "label": "T-0136 · normal"
+    },
+    {
+      "objectName": "Tree_T-0137",
+      "treeId": "T-0137",
+      "siteId": "demo-hainan",
+      "label": "T-0137 · normal"
+    },
+    {
+      "objectName": "Tree_T-0138",
+      "treeId": "T-0138",
+      "siteId": "demo-hainan",
+      "label": "T-0138 · normal"
+    },
+    {
+      "objectName": "Tree_T-0139",
+      "treeId": "T-0139",
+      "siteId": "demo-hainan",
+      "label": "T-0139 · normal"
+    },
+    {
+      "objectName": "Tree_T-0140",
+      "treeId": "T-0140",
+      "siteId": "demo-hainan",
+      "label": "T-0140 · normal"
+    },
+    {
+      "objectName": "Tree_T-0141",
+      "treeId": "T-0141",
+      "siteId": "demo-hainan",
+      "label": "T-0141 · normal"
+    },
+    {
+      "objectName": "Tree_T-0142",
+      "treeId": "T-0142",
+      "siteId": "demo-hainan",
+      "label": "T-0142 · normal"
+    },
+    {
+      "objectName": "Tree_T-0143",
+      "treeId": "T-0143",
+      "siteId": "demo-hainan",
+      "label": "T-0143 · normal"
+    },
+    {
+      "objectName": "Tree_T-0144",
+      "treeId": "T-0144",
+      "siteId": "demo-hainan",
+      "label": "T-0144 · normal"
+    },
+    {
+      "objectName": "Tree_T-0145",
+      "treeId": "T-0145",
+      "siteId": "demo-hainan",
+      "label": "T-0145 · normal"
+    },
+    {
+      "objectName": "Tree_T-0146",
+      "treeId": "T-0146",
+      "siteId": "demo-hainan",
+      "label": "T-0146 · normal"
+    },
+    {
+      "objectName": "Tree_T-0147",
+      "treeId": "T-0147",
+      "siteId": "demo-hainan",
+      "label": "T-0147 · normal"
+    },
+    {
+      "objectName": "Tree_T-0148",
+      "treeId": "T-0148",
+      "siteId": "demo-hainan",
+      "label": "T-0148 · normal"
+    },
+    {
+      "objectName": "Tree_T-0149",
+      "treeId": "T-0149",
+      "siteId": "demo-hainan",
+      "label": "T-0149 · normal"
+    },
+    {
+      "objectName": "Tree_T-0150",
+      "treeId": "T-0150",
+      "siteId": "demo-hainan",
+      "label": "T-0150 · normal"
+    },
+    {
+      "objectName": "Tree_T-0151",
+      "treeId": "T-0151",
+      "siteId": "demo-hainan",
+      "label": "T-0151 · normal"
+    },
+    {
+      "objectName": "Tree_T-0152",
+      "treeId": "T-0152",
+      "siteId": "demo-hainan",
+      "label": "T-0152 · normal"
+    },
+    {
+      "objectName": "Tree_T-0153",
+      "treeId": "T-0153",
+      "siteId": "demo-hainan",
+      "label": "T-0153 · normal"
+    },
+    {
+      "objectName": "Tree_T-0154",
+      "treeId": "T-0154",
+      "siteId": "demo-hainan",
+      "label": "T-0154 · normal"
+    },
+    {
+      "objectName": "Tree_T-0155",
+      "treeId": "T-0155",
+      "siteId": "demo-hainan",
+      "label": "T-0155 · normal"
+    },
+    {
+      "objectName": "Tree_T-0156",
+      "treeId": "T-0156",
+      "siteId": "demo-hainan",
+      "label": "T-0156 · normal"
+    },
+    {
+      "objectName": "Tree_T-0157",
+      "treeId": "T-0157",
+      "siteId": "demo-hainan",
+      "label": "T-0157 · normal"
+    },
+    {
+      "objectName": "Tree_T-0158",
+      "treeId": "T-0158",
+      "siteId": "demo-hainan",
+      "label": "T-0158 · normal"
+    },
+    {
+      "objectName": "Tree_T-0159",
+      "treeId": "T-0159",
+      "siteId": "demo-hainan",
+      "label": "T-0159 · normal"
+    },
+    {
+      "objectName": "Tree_T-0160",
+      "treeId": "T-0160",
+      "siteId": "demo-hainan",
+      "label": "T-0160 · normal"
+    },
+    {
+      "objectName": "Tree_T-0161",
+      "treeId": "T-0161",
+      "siteId": "demo-hainan",
+      "label": "T-0161 · normal"
+    },
+    {
+      "objectName": "Tree_T-0162",
+      "treeId": "T-0162",
+      "siteId": "demo-hainan",
+      "label": "T-0162 · normal"
+    },
+    {
+      "objectName": "Tree_T-0163",
+      "treeId": "T-0163",
+      "siteId": "demo-hainan",
+      "label": "T-0163 · normal"
+    },
+    {
+      "objectName": "Tree_T-0164",
+      "treeId": "T-0164",
+      "siteId": "demo-hainan",
+      "label": "T-0164 · normal"
+    },
+    {
+      "objectName": "Tree_T-0165",
+      "treeId": "T-0165",
+      "siteId": "demo-hainan",
+      "label": "T-0165 · normal"
+    },
+    {
+      "objectName": "Tree_T-0166",
+      "treeId": "T-0166",
+      "siteId": "demo-hainan",
+      "label": "T-0166 · normal"
+    },
+    {
+      "objectName": "Tree_T-0167",
+      "treeId": "T-0167",
+      "siteId": "demo-hainan",
+      "label": "T-0167 · normal"
+    },
+    {
+      "objectName": "Tree_T-0168",
+      "treeId": "T-0168",
+      "siteId": "demo-hainan",
+      "label": "T-0168 · normal"
+    },
+    {
+      "objectName": "Tree_T-0169",
+      "treeId": "T-0169",
+      "siteId": "demo-hainan",
+      "label": "T-0169 · normal"
+    },
+    {
+      "objectName": "Tree_T-0170",
+      "treeId": "T-0170",
+      "siteId": "demo-hainan",
+      "label": "T-0170 · normal"
+    },
+    {
+      "objectName": "Tree_T-0171",
+      "treeId": "T-0171",
+      "siteId": "demo-hainan",
+      "label": "T-0171 · normal"
+    },
+    {
+      "objectName": "Tree_T-0172",
+      "treeId": "T-0172",
+      "siteId": "demo-hainan",
+      "label": "T-0172 · normal"
+    },
+    {
+      "objectName": "Tree_T-0173",
+      "treeId": "T-0173",
+      "siteId": "demo-hainan",
+      "label": "T-0173 · normal"
+    },
+    {
+      "objectName": "Tree_T-0174",
+      "treeId": "T-0174",
+      "siteId": "demo-hainan",
+      "label": "T-0174 · normal"
+    },
+    {
+      "objectName": "Tree_T-0175",
+      "treeId": "T-0175",
+      "siteId": "demo-hainan",
+      "label": "T-0175 · normal"
+    },
+    {
+      "objectName": "Tree_T-0176",
+      "treeId": "T-0176",
+      "siteId": "demo-hainan",
+      "label": "T-0176 · normal"
+    },
+    {
+      "objectName": "Tree_T-0177",
+      "treeId": "T-0177",
+      "siteId": "demo-hainan",
+      "label": "T-0177 · normal"
+    },
+    {
+      "objectName": "Tree_T-0178",
+      "treeId": "T-0178",
+      "siteId": "demo-hainan",
+      "label": "T-0178 · normal"
+    },
+    {
+      "objectName": "Tree_T-0179",
+      "treeId": "T-0179",
+      "siteId": "demo-hainan",
+      "label": "T-0179 · normal"
+    },
+    {
+      "objectName": "Tree_T-0180",
+      "treeId": "T-0180",
+      "siteId": "demo-hainan",
+      "label": "T-0180 · normal"
+    },
+    {
+      "objectName": "Tree_T-0181",
+      "treeId": "T-0181",
+      "siteId": "demo-hainan",
+      "label": "T-0181 · normal"
+    },
+    {
+      "objectName": "Tree_T-0182",
+      "treeId": "T-0182",
+      "siteId": "demo-hainan",
+      "label": "T-0182 · normal"
+    },
+    {
+      "objectName": "Tree_T-0183",
+      "treeId": "T-0183",
+      "siteId": "demo-hainan",
+      "label": "T-0183 · normal"
+    },
+    {
+      "objectName": "Tree_T-0184",
+      "treeId": "T-0184",
+      "siteId": "demo-hainan",
+      "label": "T-0184 · normal"
+    },
+    {
+      "objectName": "Tree_T-0185",
+      "treeId": "T-0185",
+      "siteId": "demo-hainan",
+      "label": "T-0185 · normal"
+    },
+    {
+      "objectName": "Tree_T-0186",
+      "treeId": "T-0186",
+      "siteId": "demo-hainan",
+      "label": "T-0186 · normal"
+    },
+    {
+      "objectName": "Tree_T-0187",
+      "treeId": "T-0187",
+      "siteId": "demo-hainan",
+      "label": "T-0187 · normal"
+    },
+    {
+      "objectName": "Tree_T-0188",
+      "treeId": "T-0188",
+      "siteId": "demo-hainan",
+      "label": "T-0188 · normal"
+    },
+    {
+      "objectName": "Tree_T-0189",
+      "treeId": "T-0189",
+      "siteId": "demo-hainan",
+      "label": "T-0189 · normal"
+    },
+    {
+      "objectName": "Tree_T-0190",
+      "treeId": "T-0190",
+      "siteId": "demo-hainan",
+      "label": "T-0190 · normal"
+    },
+    {
+      "objectName": "Tree_T-0191",
+      "treeId": "T-0191",
+      "siteId": "demo-hainan",
+      "label": "T-0191 · normal"
+    },
+    {
+      "objectName": "Tree_T-0192",
+      "treeId": "T-0192",
+      "siteId": "demo-hainan",
+      "label": "T-0192 · normal"
+    },
+    {
+      "objectName": "Tree_T-0193",
+      "treeId": "T-0193",
+      "siteId": "demo-hainan",
+      "label": "T-0193 · normal"
+    },
+    {
+      "objectName": "Tree_T-0194",
+      "treeId": "T-0194",
+      "siteId": "demo-hainan",
+      "label": "T-0194 · normal"
+    },
+    {
+      "objectName": "Tree_T-0195",
+      "treeId": "T-0195",
+      "siteId": "demo-hainan",
+      "label": "T-0195 · normal"
+    },
+    {
+      "objectName": "Tree_T-0196",
+      "treeId": "T-0196",
+      "siteId": "demo-hainan",
+      "label": "T-0196 · normal"
+    },
+    {
+      "objectName": "Tree_T-0197",
+      "treeId": "T-0197",
+      "siteId": "demo-hainan",
+      "label": "T-0197 · normal"
+    },
+    {
+      "objectName": "Tree_T-0198",
+      "treeId": "T-0198",
+      "siteId": "demo-hainan",
+      "label": "T-0198 · normal"
+    },
+    {
+      "objectName": "Tree_T-0199",
+      "treeId": "T-0199",
+      "siteId": "demo-hainan",
+      "label": "T-0199 · normal"
+    },
+    {
+      "objectName": "Tree_T-0200",
+      "treeId": "T-0200",
+      "siteId": "demo-hainan",
+      "label": "T-0200 · normal"
+    }
+  ],
+  "items": [
+    {
+      "kind": "snapshots",
+      "status": "partial",
+      "needsData": 2,
+      "error": "2 项策略缺少必要业务数据，已保留待补充状态"
+    }
+  ],
+  "summary": {
+    "prepared": 0,
+    "preserved": 0,
+    "scenarios": 11,
+    "modelRequests": 0
+  }
+}

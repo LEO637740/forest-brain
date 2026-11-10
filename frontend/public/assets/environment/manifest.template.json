@@ -1,0 +1,148 @@
+{
+  "schema": "environment-asset-registry.v1",
+  "status": "template-for-runtime-ready-generated-baseline",
+  "site": "hainan",
+  "units": "meters",
+  "axis": "+Y up",
+  "origin": "ground contact at (0,0,0)",
+  "animation": false,
+  "fallback": "src/environmentVegetation.ts upgradeNaturalEnvironment()",
+  "assets": [
+    {
+      "kind": "tall-tree",
+      "silhouette": "narrow vertical crown; no ball canopy",
+      "dimensions_m": [
+        3.2,
+        3.0,
+        16.0
+      ],
+      "lod": {
+        "near": {
+          "file": "tall-tree/near.glb",
+          "triangles": 1800,
+          "distance_m": 0
+        },
+        "mid": {
+          "file": "tall-tree/mid.glb",
+          "triangles": 700,
+          "distance_m": 48
+        },
+        "far": {
+          "file": "tall-tree/far.glb",
+          "triangles": 120,
+          "distance_m": 120
+        }
+      },
+      "material": "bark + layered leaf cards",
+      "source": "unassigned",
+      "license": "TBD local Blender authored or CC0",
+      "sha256": null
+    },
+    {
+      "kind": "umbrella-tree",
+      "silhouette": "asymmetric umbrella crown with visible trunk",
+      "dimensions_m": [
+        8.5,
+        7.8,
+        11.0
+      ],
+      "lod": {
+        "near": {
+          "file": "umbrella-tree/near.glb",
+          "triangles": 2200,
+          "distance_m": 0
+        },
+        "mid": {
+          "file": "umbrella-tree/mid.glb",
+          "triangles": 820,
+          "distance_m": 48
+        },
+        "far": {
+          "file": "umbrella-tree/far.glb",
+          "triangles": 140,
+          "distance_m": 120
+        }
+      },
+      "material": "branched trunk + flat crown",
+      "source": "unassigned",
+      "license": "TBD local Blender authored or CC0",
+      "sha256": null
+    },
+    {
+      "kind": "evergreen-broadleaf",
+      "silhouette": "separated broadleaf masses with negative space",
+      "dimensions_m": [
+        6.4,
+        5.8,
+        12.0
+      ],
+      "lod": {
+        "near": {
+          "file": "evergreen-broadleaf/near.glb",
+          "triangles": 1900,
+          "distance_m": 0
+        },
+        "mid": {
+          "file": "evergreen-broadleaf/mid.glb",
+          "triangles": 760,
+          "distance_m": 48
+        },
+        "far": {
+          "file": "evergreen-broadleaf/far.glb",
+          "triangles": 130,
+          "distance_m": 120
+        }
+      },
+      "material": "leaf masses with low-gloss green",
+      "source": "unassigned",
+      "license": "TBD local Blender authored or CC0",
+      "sha256": null
+    },
+    {
+      "kind": "shrub",
+      "silhouette": "low clump with upright stems; no sphere crown",
+      "dimensions_m": [
+        2.2,
+        1.9,
+        1.6
+      ],
+      "lod": {
+        "near": {
+          "file": "shrub/near.glb",
+          "triangles": 480,
+          "distance_m": 0
+        },
+        "mid": {
+          "file": "shrub/mid.glb",
+          "triangles": 180,
+          "distance_m": 48
+        },
+        "far": {
+          "file": "shrub/far.glb",
+          "triangles": 32,
+          "distance_m": 120
+        }
+      },
+      "material": "stem + leaf clump",
+      "source": "unassigned",
+      "license": "TBD local Blender authored or CC0",
+      "sha256": null
+    }
+  ],
+  "performance_budget": {
+    "near_instances": 120,
+    "mid_instances": 220,
+    "far_instances": 420,
+    "max_triangles_visible": 900000,
+    "max_environment_draw_calls": 24
+  },
+  "replacement_hook": "DigitalTwinScene.tsx -> mountEnvironmentAssetRegistry() after addNaturalEnvironment()",
+  "acceptance": {
+    "preview": "environment_asset_board.svg",
+    "required": "silhouette, axis, origin, license and sha256 review before publishing GLB"
+  },
+  "source": "Copy one site manifest and run scripts/environment_asset_factory.py",
+  "license_boundary": "Original project-generated geometry; no external asset or downloaded texture license is claimed.",
+  "generator": "scripts/environment_asset_factory.py",
+  "generator_version": "2026-10-05.baseline-1"
+}

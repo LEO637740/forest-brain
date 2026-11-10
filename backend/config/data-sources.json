@@ -1,0 +1,12 @@
+{
+  "location": {
+    "name": "海口市参考点（园区地点待确认）",
+    "latitude": 20.03421,
+    "longitude": 110.34651,
+    "confirmed": false,
+    "siteId": "demo-hainan"
+  },
+  "refreshMinutes": 60,
+  "maxWeatherAgeMinutes": 120,
+  "marketLookbackDays": 14
+}

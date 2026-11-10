@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>橡胶大脑 · Harness 联调台</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+  <aside class="sidebar">
+    <a href="/" class="brand"><span class="brand-symbol">◈</span><span>橡胶大脑<small>HARNESS WORKSPACE</small></span></a>
+    <div class="workspace-label">开发工作空间 <span>V2</span></div>
+    <nav aria-label="主导航"><button class="nav-item active" data-view="workspace"><span>⌘</span>能力联调</button><button class="nav-item" data-view="live"><span>↗</span>真实数据源</button><button class="nav-item" data-view="park"><span>♧</span>数据与场景</button><button class="nav-item" data-view="history"><span>◷</span>运行记录</button><button class="nav-item" data-view="integration"><span>⇄</span>接口与接入</button></nav>
+    <div class="sidebar-section">职责边界</div><div class="boundary"><span>业务数据</span><b>↓</b><span class="current">Harness · 证据与建议</span><b>↓</b><span>业务采用与任务服务</span></div>
+    <div class="sidebar-bottom"><span class="status-dot"></span><span>模拟环境<small>策略输出 · 无设备控制</small></span></div>
+  </aside>
+  <main>
+    <header class="topbar"><div>工作空间 <span>/</span> <strong id="breadcrumb">能力联调</strong></div><div class="top-actions"><span id="connection" class="connection">连接中</span><span class="avatar">FC</span></div></header>
+    <div class="page">
+      <div id="notice" class="notice" role="alert" hidden></div>
+      <section id="model-control-panel" class="panel info-card" hidden>
+        <div class="detail-top"><h2 id="model-control-title">模型调用开关</h2><button id="model-control-toggle" class="secondary">暂停全部模型调用</button></div>
+        <p id="model-control-summary" aria-live="polite"></p>
+        <p class="case-note">控制手动分析、自动分析、修正和重启恢复中的新模型请求。默认启动会恢复已配置模型；暂停状态会停止新的模型请求，已发出的请求可能仍计费。公开数据采集、历史查看和离线规则演示可继续使用。</p>
+      </section>
+      <section id="automatic-panel" class="panel info-card" hidden>
+        <div class="detail-top"><h2>大脑自动运行</h2><button id="automatic-toggle" class="secondary">暂停自动运行</button></div>
+        <p id="automatic-summary" aria-live="polite"></p><p id="automatic-budget" class="case-note"></p>
+        <div id="automatic-runs"></div>
+        <p class="case-note">服务运行期间自动采集、分析并保存策略。关闭服务或电脑休眠时不会继续；建议仍需人工复核。手动分析另计 API 用量。</p>
+      </section>
+      <section id="workspace-view">
+        <div class="heading"><div><div class="eyebrow">RUBBER INTELLIGENCE / 02</div><h1>把数据，变成有依据的建议。</h1><p>选择能力和目标，检查一次从输入快照到策略包的完整运行。</p></div><span class="outline-tag" id="engine-label">规则演示引擎</span></div>
+        <div id="sources" class="source-grid"></div>
+        <div class="section-title"><h2>能力工作台</h2><span>7 个能力 · 统一异步协议</span></div>
+        <div id="capabilities" class="capability-grid" role="group" aria-label="分析能力"></div>
+        <div class="work-grid">
+          <section class="panel input-panel"><div class="panel-heading"><h2><span class="step">01</span>本次输入</h2><span class="muted">INPUT</span></div>
+            <div class="input-body">
+              <label for="engine-mode">决策引擎</label><select id="engine-mode"><option value="configured">已配置模型服务</option><option value="demo_rules">离线规则演示（不调用模型）</option></select><p id="model-note" class="case-note"></p><label for="data-mode">输入来源</label><select id="data-mode"><option value="public">严格检查真实缺项（树档案仍为模拟）</option><option value="demo">纯模拟场景（演示用）</option><option value="mixed_demo" selected>真实优先，缺项用模拟补齐</option></select><p id="data-mode-note" class="case-note">真实来源模式如实返回地点、现场观测和经营数据的缺项，不自动补造。</p><div id="tree-inputs"><label for="tree">目标树 <span>海南 · 模拟档案</span></label><select id="tree"></select>
+              <label>目标范围</label><div class="segmented"><button class="selected" id="single">单棵树</button><button id="group">样例树群 · 3 棵</button></div>
+              <label for="variant">数据条件</label><select id="variant"><option value="normal">按档案原始情况</option><option value="missing_weather">现场雨量缺失</option><option value="rainy">现场有雨</option><option value="unregistered">图像未配准</option><option value="missing_cost">经营成本缺失</option></select>
+              </div><div id="case-note" class="case-note"></div>
+              <div class="scope-summary"><span>本次读取</span><div id="module-tags"></div><p>每次运行固定目标成员和数据版本，后续变化不会覆盖历史结果。</p></div>
+              <button class="primary" id="run">运行分析 <span>↗</span></button>
+              <p class="input-footer" id="input-footer">输出建议及依据，由业务后端检查采用条件。</p>
+            </div>
+          </section>
+          <section class="panel result-panel"><div class="panel-heading"><h2><span class="step">02</span>运行结果</h2><span id="result-status" class="pill neutral">等待运行</span></div>
+            <div class="result-tabs" role="tablist"><button class="active" data-tab="overview" role="tab">建议概览</button><button data-tab="context" role="tab">输入证据</button><button data-tab="events" role="tab">运行轨迹</button><button data-tab="json" role="tab">JSON</button></div>
+            <div id="result-content" class="result-content" aria-live="polite"></div>
+            <div class="result-footer"><span id="run-meta">尚未创建运行</span><button id="download" class="text-button" disabled>导出策略包 ↓</button></div>
+          </section>
+        </div>
+        <div class="section-title history-title"><h2>最近运行</h2><button class="text-button" id="refresh">刷新记录 ↻</button></div><div id="recent-runs" class="panel history-table"></div>
+      </section>
+      <section id="live-view" hidden>
+        <div class="heading"><div><div class="eyebrow">PUBLIC DATA / TRACEABLE SOURCES</div><h1>真实来源，明确边界。</h1><p>公开天气、橡胶期货、现货月报、进口、全国与海南产量、仓单和病虫害资料。保留来源、发布时间、抓取时间与原始快照。</p></div><button id="refresh-sources" class="secondary">更新公开数据 ↻</button></div>
+        <button id="industry-run" class="primary">用混合数据生成行业研判 ↗</button><p class="case-note">真实公共资料优先，企业及不可用来源用模拟补齐。使用配置模型会消耗 API 额度。</p><div id="live-location" class="notice"></div><div id="live-sources" class="scenario-grid"></div><section class="panel info-card"><h2>会议数据需求覆盖</h2><div id="source-coverage"></div></section>
+        <section class="panel info-card"><h2>企业模拟数据 · 补齐演示</h2><p>3 个加工批次、2 条库存、2 个订单、1 条运输；记录相互关联，全部为虚构。可在下方展开查看，并在混合行业研判中使用。</p><div id="business-demo"></div></section><section class="panel info-card"><h2>未来替换为真实业务数据</h2><p>园区坐标、树木档案、传感器雨量与温湿度、树表图像、割面历史、实际成本与产量、现货销售价、企业库存和运输记录。演示阶段用模拟数据替代，保留 simulated 标签；200 棵树档案仍为模拟。</p><p>原七场景保留在“数据与场景”，明确使用纯模拟输入。真实来源的分析在“能力联调”选择输入来源。</p></section>
+      </section>
+      <section id="park-view" hidden>
+        <div class="heading"><div><div class="eyebrow">SIMULATED PARK / 200 TREES</div><h1>一个园区，不同的树与情况。</h1><p>全部为合成数据。七场景按模拟时间回放，固定使用离线规则，不调用模型；模型分析请到“能力联调”。</p></div></div>
+        <div id="park-counts" class="source-grid"></div>
+        <div class="section-title"><h2>七个可演示场景</h2><button id="play-story" class="secondary">一键运行全部场景 →</button></div>
+        <p class="park-note">先比较早间与半小时后的天气，再看异常树、缺数据和历史趋势。点击一次会自动提交七项分析，无需逐项点击。</p>
+        <div id="scenario-cards" class="scenario-grid"></div><div id="story-results" aria-live="polite"></div>
+        <div class="section-title history-title"><h2>200 棵树的档案</h2><button id="export-park" class="text-button">导出园区原始数据 JSON ↓</button></div>
+        <div class="park-filters"><label>分区<select id="park-block"><option value="">全部分区</option><option>A</option><option>B</option><option>C</option><option>D</option></select></label><label>模拟情况<select id="park-profile"><option value="">全部情况</option></select></label><span id="park-filter-count"></span></div>
+        <div id="park-trees" class="panel history-table park-table"></div>
+        <div id="park-detail" class="panel info-card" hidden></div>
+      </section>
+      <section id="history-view" hidden><div class="heading"><div><div class="eyebrow">RUN HISTORY</div><h1>每次建议，都有来处。</h1><p>运行结果与事件持久保存。点击记录查看当时的输入和输出。</p></div></div><div id="all-runs" class="panel history-table"></div><button id="load-more" class="secondary" hidden>加载更多</button></section>
+      <section id="integration-view" hidden><div class="heading"><div><div class="eyebrow">INTEGRATION CONTRACT</div><h1>让前台和大脑，各司其职。</h1><p>MH 前台通过业务后端读取事实和策略，Harness 接收固定范围的上下文。</p></div></div>
+        <div class="integration-flow panel"><span>MH 三维前台<small>展示与用户意图</small></span><b>⇄</b><span>业务后端<small>档案 / 快照 / 任务 / 持久化</small></span><b>⇄</b><span>Harness<small>取证 / 候选 / 校验 / 建议</small></span></div>
+        <div class="integration-grid"><section class="panel info-card"><h2>三个对接入口</h2><div class="endpoint"><b>POST</b><code>/internal/harness/runs</code></div><p>提交 kind、园区、目标快照和输入快照，202 返回 runId。</p><div class="endpoint"><b>GET</b><code>/internal/harness/runs/{runId}</code></div><p>轮询 queued / running；结束后读取 succeeded、needs_data 或 failed。</p><div class="endpoint"><b>GET</b><code>{CONTEXT_API_URL}/contexts/{id}?version=1</code></div><p>由业务后端提供，Harness 只读获取授权范围内的冻结上下文。</p><a class="text-button" href="/contracts/harness-v1.schema.json" target="_blank" rel="noreferrer">查看运行时 JSON 契约 ↗</a></section>
+        <section class="panel info-card"><h2>当前接入状态</h2><div id="integration-status"></div><div class="callout">这份契约根据 09 / 10 号字段草案实现。原附件提到的 <code>harness-v1.ts</code> 未提供，字段细节仍需与 MH 对齐。</div><h3>服务令牌</h3><p>仅在服务器启用 HARNESS_API_TOKEN 时填写；令牌只保留在当前页面内存中。</p><form id="auth-form"><input type="password" id="token" placeholder="服务访问令牌" autocomplete="off" aria-label="服务访问令牌"><button class="secondary" type="submit">连接</button></form></section></div>
+      </section>
+      <footer class="page-footer"><span>橡胶大脑 · Harness 2.1</span><span>公开资料与模拟树档案 / 建议需复核 / 未验证农艺效果</span></footer>
+    </div>
+  </main><script type="module" src="/app.js"></script>
+</body></html>

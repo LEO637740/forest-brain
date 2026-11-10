@@ -1,0 +1,276 @@
+{
+  "status": "single-V20-review-candidate-not-published",
+  "variantId": "V20",
+  "sourceSha256": "87fc7079cbb8861def248333a6d21f1fc956001cc3404c32d1e62c88abcb36bd",
+  "seed": 11,
+  "archetype": "B",
+  "units": "m",
+  "upAxis": "Y",
+  "origin": "authored tree base; inverse presentation layout only",
+  "dimensionsProvenance": "explicit authored visual parameters; not field measurements or growth prediction",
+  "nominal": {
+    "height_m": 13,
+    "dbh_m": 0.5,
+    "crown_width_m": 9
+  },
+  "assets": [
+    {
+      "lod": 0,
+      "file": "V20_LOD0.glb",
+      "sha256": "c3091e6b322b73cb4cb8793ec9efc99d421ff056b1f08242272ad7ad4860ac74",
+      "triangles": 32262,
+      "vertices": 55309,
+      "bytes": 3015260,
+      "budget": 36000,
+      "budgetPassed": true,
+      "primitives": 2,
+      "materials": [
+        {
+          "name": "V20_Body_VertexColor",
+          "pbrMetallicRoughness": {
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8799999952316284
+          }
+        },
+        {
+          "alphaMode": "MASK",
+          "doubleSided": true,
+          "name": "leaflets_MASK",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8999999761581421
+          },
+          "alphaCutoff": 0.5
+        }
+      ],
+      "textures": [
+        {
+          "name": "leaflets_normal",
+          "width": 512,
+          "height": 576,
+          "encodedBytes": 169248,
+          "sha256": "2915a7a6b5e1625c6bc684b105b93eb3bd71ad37525ad137027356f48619a6e5",
+          "rgba8WithMipsEstimateBytes": 1572864
+        },
+        {
+          "name": "leaflets_albedo",
+          "width": 512,
+          "height": 576,
+          "encodedBytes": 32976,
+          "sha256": "34c40cffffd3cb241f610bd58f3f348c6eaf7c772cc325c77798e40da0c0799f",
+          "rgba8WithMipsEstimateBytes": 1572864
+        }
+      ],
+      "extensionsRequired": []
+    },
+    {
+      "lod": 1,
+      "file": "V20_LOD1.glb",
+      "sha256": "4b6aaa8aa778f9e5b209a01dffefb317c93007c39ac9a30eade046b12298ce0e",
+      "triangles": 12330,
+      "vertices": 19278,
+      "bytes": 1217300,
+      "budget": 14000,
+      "budgetPassed": true,
+      "primitives": 2,
+      "materials": [
+        {
+          "name": "V20_Body_VertexColor",
+          "pbrMetallicRoughness": {
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8799999952316284
+          }
+        },
+        {
+          "alphaMode": "MASK",
+          "doubleSided": true,
+          "name": "trifoliates_MASK",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8999999761581421
+          },
+          "alphaCutoff": 0.5
+        }
+      ],
+      "textures": [
+        {
+          "name": "trifoliates_normal",
+          "width": 768,
+          "height": 512,
+          "encodedBytes": 195557,
+          "sha256": "77bfc2869c1a37aa687da348031b24e0ee036322416a8f47e7c6afa3a0ffe576",
+          "rgba8WithMipsEstimateBytes": 2097152
+        },
+        {
+          "name": "trifoliates_albedo",
+          "width": 768,
+          "height": 512,
+          "encodedBytes": 42431,
+          "sha256": "86e760d202f16d5c005779b3d0e1eaf6bd45fd885180b8d265beeda88403b77d",
+          "rgba8WithMipsEstimateBytes": 2097152
+        }
+      ],
+      "extensionsRequired": []
+    },
+    {
+      "lod": 2,
+      "file": "V20_LOD2.glb",
+      "sha256": "e4ea32c6ca52dbde57fe7854549bc4f61274a6792b65e057de2be2f03d70c632",
+      "triangles": 10540,
+      "vertices": 18336,
+      "bytes": 1172576,
+      "budget": 5000,
+      "budgetPassed": false,
+      "primitives": 2,
+      "materials": [
+        {
+          "name": "V20_Body_VertexColor",
+          "pbrMetallicRoughness": {
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8799999952316284
+          }
+        },
+        {
+          "alphaMode": "MASK",
+          "doubleSided": true,
+          "name": "trifoliates_MASK",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8999999761581421
+          },
+          "alphaCutoff": 0.5
+        }
+      ],
+      "textures": [
+        {
+          "name": "trifoliates_normal",
+          "width": 768,
+          "height": 512,
+          "encodedBytes": 195557,
+          "sha256": "77bfc2869c1a37aa687da348031b24e0ee036322416a8f47e7c6afa3a0ffe576",
+          "rgba8WithMipsEstimateBytes": 2097152
+        },
+        {
+          "name": "trifoliates_albedo",
+          "width": 768,
+          "height": 512,
+          "encodedBytes": 42431,
+          "sha256": "86e760d202f16d5c005779b3d0e1eaf6bd45fd885180b8d265beeda88403b77d",
+          "rgba8WithMipsEstimateBytes": 2097152
+        }
+      ],
+      "extensionsRequired": []
+    },
+    {
+      "lod": 3,
+      "file": "V20_LOD3.glb",
+      "sha256": "a43b108ce277e4e9a304df9ad05f9c71a096b07e5c283e3dd1439be9a80dc68f",
+      "triangles": 9554,
+      "vertices": 17843,
+      "bytes": 1148908,
+      "budget": 3000,
+      "budgetPassed": false,
+      "primitives": 2,
+      "materials": [
+        {
+          "name": "V20_Body_VertexColor",
+          "pbrMetallicRoughness": {
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8799999952316284
+          }
+        },
+        {
+          "alphaMode": "MASK",
+          "doubleSided": true,
+          "name": "trifoliates_MASK",
+          "normalTexture": {
+            "index": 0
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": 1
+            },
+            "metallicFactor": 0,
+            "roughnessFactor": 0.8999999761581421
+          },
+          "alphaCutoff": 0.5
+        }
+      ],
+      "textures": [
+        {
+          "name": "trifoliates_normal",
+          "width": 768,
+          "height": 512,
+          "encodedBytes": 195557,
+          "sha256": "77bfc2869c1a37aa687da348031b24e0ee036322416a8f47e7c6afa3a0ffe576",
+          "rgba8WithMipsEstimateBytes": 2097152
+        },
+        {
+          "name": "trifoliates_albedo",
+          "width": 768,
+          "height": 512,
+          "encodedBytes": 42431,
+          "sha256": "86e760d202f16d5c005779b3d0e1eaf6bd45fd885180b8d265beeda88403b77d",
+          "rgba8WithMipsEstimateBytes": 2097152
+        }
+      ],
+      "extensionsRequired": []
+    }
+  ],
+  "totalGlbBytes": 6554044,
+  "uniqueTextures": [
+    {
+      "name": "leaflets_normal",
+      "width": 512,
+      "height": 576,
+      "encodedBytes": 169248,
+      "sha256": "2915a7a6b5e1625c6bc684b105b93eb3bd71ad37525ad137027356f48619a6e5",
+      "rgba8WithMipsEstimateBytes": 1572864
+    },
+    {
+      "name": "leaflets_albedo",
+      "width": 512,
+      "height": 576,
+      "encodedBytes": 32976,
+      "sha256": "34c40cffffd3cb241f610bd58f3f348c6eaf7c772cc325c77798e40da0c0799f",
+      "rgba8WithMipsEstimateBytes": 1572864
+    },
+    {
+      "name": "trifoliates_normal",
+      "width": 768,
+      "height": 512,
+      "encodedBytes": 195557,
+      "sha256": "77bfc2869c1a37aa687da348031b24e0ee036322416a8f47e7c6afa3a0ffe576",
+      "rgba8WithMipsEstimateBytes": 2097152
+    },
+    {
+      "name": "trifoliates_albedo",
+      "width": 768,
+      "height": 512,
+      "encodedBytes": 42431,
+      "sha256": "86e760d202f16d5c005779b3d0e1eaf6bd45fd885180b8d265beeda88403b77d",
+      "rgba8WithMipsEstimateBytes": 2097152
+    }
+  ],
+  "uniqueTextureRgba8MipEstimateBytes": 7340032,
+  "textureSharingNote": "LOD1/2/3 have identical foliage geometry and encoded texture contents but embedded images in different GLBs are NOT automatically deduplicated by GLTFLoader. GPU estimate assumes explicit future dedup; this viewer does not dedup.",
+  "businessBinding": "No business IDs or positions included; integration session owns bindings."
+}

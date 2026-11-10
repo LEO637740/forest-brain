@@ -1,0 +1,29 @@
+# Dependencies and generated output
+**/node_modules
+**/dist/
+*.tsbuildinfo
+.DS_Store
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Runtime state, caches and local review artifacts
+backend/var/
+backend/data/automatic/
+backend/data/real-sources/
+backend/data/audit/
+backend/data/llm-validation/
+qa/
+verification/
+output/
+tmp/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log

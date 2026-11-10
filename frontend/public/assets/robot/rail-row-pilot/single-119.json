@@ -1,0 +1,77 @@
+{
+  "status": "DEMO_GEOMETRY_CANDIDATE",
+  "executionApproved": false,
+  "contactApproved": false,
+  "cuttingApproved": false,
+  "connectedToOtherSegments": false,
+  "runtimeTreeYawRadians": 5.984965240591071,
+  "treeIndices": [
+    119
+  ],
+  "treeSource": {
+    "index": 119,
+    "id": "HN-C-0020",
+    "family": "B",
+    "assetVariant": "original_mature_family",
+    "scale": 0.9651169280335308,
+    "yawRadians": 5.984965240591071,
+    "worldGltf": [
+      66.37546042378526,
+      7.303156770237426,
+      18.990486236329705
+    ],
+    "targetAnchorTreeLocalGltfM": [
+      0.0936395297793764,
+      1.654399189035007,
+      0.24764717068563352
+    ],
+    "anchorStatus": "original mature B upper panel/cup candidate; provisional"
+  },
+  "bestStraightRail": {
+    "rootWorldGltf": [
+      66.38888965566858,
+      7.441388314889197,
+      20.00313793212851
+    ],
+    "yawRadians": 5.984965240591071,
+    "segmentCentersLocalX": [
+      0
+    ],
+    "supports": [
+      {
+        "localX": -1.18,
+        "localZ": -0.26,
+        "pierDepthM": 0.06825240499797225
+      },
+      {
+        "localX": -1.18,
+        "localZ": 0.26,
+        "pierDepthM": 0.075575337427634
+      },
+      {
+        "localX": 1.18,
+        "localZ": -0.26,
+        "pierDepthM": 0.28846190386081005
+      },
+      {
+        "localX": 1.18,
+        "localZ": 0.26,
+        "pierDepthM": 0.2961047019131371
+      }
+    ],
+    "stations": [
+      {
+        "id": "HN-C-0020",
+        "parkLocalX": 0,
+        "extensionM": 0.05,
+        "sliderOffsetM": -0.331542881589141,
+        "toolFeedM": 0
+      }
+    ]
+  },
+  "screen": {
+    "roadShoulderMarginM": 11.439251145463375,
+    "noncontactCollision": "PASS_SAMPLED",
+    "assumptions": "Single 3.2 m twin-profile segment; local rail X is travel axis, tree is local -Z; no cross-segment route."
+  }
+}

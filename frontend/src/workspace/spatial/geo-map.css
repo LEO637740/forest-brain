@@ -1,0 +1,88 @@
+.gm-canvas{position:relative;width:100%;height:100%;min-height:0;overflow:hidden;background:#14231e;touch-action:none;cursor:grab;isolation:isolate;font-family:inherit;font-size:12px;line-height:1.4;color:#edf4f0;border:1px solid #3b5548;border-radius:7px;outline-offset:3px;box-sizing:border-box}
+.gm-canvas.gm-dragging{cursor:grabbing}
+.gm-tiles,.gm-overlays{position:absolute;inset:0;will-change:transform}
+/* Keep the raster quiet and dark; business markers remain in a separate, unfiltered layer. */
+.gm-tiles{pointer-events:none;z-index:0;filter:grayscale(1) invert(1) sepia(.3) hue-rotate(80deg) saturate(.7) brightness(1.25) contrast(1)}
+.gm-tiles img{position:absolute;max-width:none;user-select:none}
+.gm-overlays{z-index:1;pointer-events:none}
+.gm-boundary{position:absolute;inset:0;overflow:visible;pointer-events:none}
+.gm-boundary path{fill:#79dfb621;stroke:#79dfb6;stroke-width:3;stroke-linejoin:round}
+.gm-areas{position:absolute;inset:0;overflow:visible;pointer-events:none}
+.gm-area{fill:#67b78c2e;stroke:#91c5a4;stroke-width:2;stroke-linejoin:round;pointer-events:auto;cursor:pointer;transition:fill .15s,stroke .15s}
+.gm-area:hover{fill:#75c3984d;stroke:#c1efd2}
+.gm-area.gm-area-selected{fill:#78cb9e52;stroke:#c4f2d6;stroke-width:3}
+.gm-area-label{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:9px;padding:6px 10px;border:1px solid #91c5a4;border-radius:5px;background:#1a3a2cef;color:#e4f5e9;font-family:inherit;font-size:14px;font-weight:700;line-height:1.3;box-shadow:0 2px 9px #0006;white-space:nowrap;pointer-events:auto;cursor:pointer;z-index:2}
+.gm-area-label span{color:#b2d9bf;font-size:19px;font-weight:400}
+.gm-area-label:hover,.gm-area-label.gm-area-selected{background:#2b5d42;border-color:#c4f2d6;color:#fff}
+.gm-area-label:focus-visible{outline:2px solid #c4f2d6;outline-offset:3px}
+.gm-marker{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:0;background:transparent;box-shadow:none!important;pointer-events:auto;cursor:pointer;color:#e9fff3;z-index:1}
+.gm-marker-dot{width:18px;height:18px;box-sizing:border-box;border:3px solid #0f2a20;border-radius:50%;background:#79dfb6;box-shadow:0 0 0 2px #79dfb6,0 2px 8px #000b;flex-shrink:0}
+.gm-marker-label{position:absolute;top:36px;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:12px;padding:8px 12px;border:1px solid #74bd9b;border-radius:5px;background:#112d22;white-space:nowrap;font-size:14px;font-weight:650;line-height:1.4;box-shadow:0 3px 12px #0008;color:#effff6}
+.gm-marker-arrow{color:#86e5bc;font-size:20px;font-weight:400;line-height:1}
+.gm-marker-zone .gm-marker-dot{width:23px;height:23px;border-radius:5px;background:#a0ecd0;box-shadow:0 0 0 2px #a0ecd0,0 2px 8px #000b}
+.gm-marker-zone .gm-marker-label{font-size:15px;background:#173b2d;border-color:#8de2bc}
+.gm-marker-tree{width:18px;height:18px}
+.gm-marker-tree .gm-marker-dot{width:11px;height:11px;border-width:2px;box-shadow:0 0 0 1px #a4e9c7,0 1px 4px #000b}
+.gm-marker-tree .gm-marker-label{display:none;top:29px;font-size:13px}
+.gm-marker-planned .gm-marker-dot,.gm-marker.gm-simulated .gm-marker-dot{background:#ddbe73;border:2px dashed #f8e3a9;box-shadow:0 0 0 2px #243026,0 2px 8px #000a}
+.gm-marker-planned .gm-marker-label{color:#f1dfb5;background:#302d20;border-color:#978251}
+.gm-marker-planned .gm-marker-arrow{color:#e0c584}
+/* Producer bubbles: area follows annual output; pinned names sit beside the bubble, full figures on hover. */
+.gm-marker-producer{width:var(--gm-bubble,16px);height:var(--gm-bubble,16px);z-index:2}
+.gm-marker-producer .gm-marker-dot{width:100%;height:100%;border:1.5px solid #f6d58c;background:#e3a94a66;box-shadow:0 0 0 1px #0f2a2088,0 2px 10px #0008}
+.gm-marker-producer .gm-marker-label{display:none;top:calc(100% + 4px);font-size:13px;padding:5px 9px;gap:8px;background:#2a2617f2;border-color:#b8975a}
+.gm-marker-producer.gm-pinned .gm-marker-label{display:inline-flex}
+.gm-marker .gm-pinned-text{display:none}.gm-marker.gm-pinned:not(:hover):not(.gm-selected) .gm-pinned-text{display:inline}.gm-marker.gm-pinned:not(:hover):not(.gm-selected) .gm-full-text{display:none}
+.gm-marker-producer.gm-pinned:not(:hover):not(.gm-selected) .gm-marker-label{padding:2px 6px;font-size:12px}
+.gm-marker-producer.gm-label-above .gm-marker-label{top:auto;bottom:calc(100% + 4px)}
+.gm-marker-producer.gm-label-left .gm-marker-label{top:50%;left:auto;right:calc(100% + 4px);transform:translateY(-50%)}
+.gm-marker-producer.gm-label-right .gm-marker-label{top:50%;left:calc(100% + 4px);transform:translateY(-50%)}
+.gm-marker-producer:hover .gm-marker-dot,.gm-marker-producer.gm-selected .gm-marker-dot{background:#f2bf5ea8;border-color:#ffe6b0;box-shadow:0 0 0 3px #3a2e1588,0 0 0 4px #ffe6b0}
+.gm-marker-org{z-index:3}
+.gm-marker-org .gm-marker-dot{width:17px;height:17px;border-radius:3px;transform:rotate(45deg);border:2px solid #0f1f33;background:#8cc4ff;box-shadow:0 0 0 2px #8cc4ff,0 2px 8px #000b}
+.gm-marker-org .gm-marker-label{display:inline-flex;top:34px;padding:3px 8px;font-size:12px;background:#152438f2;border-color:#6f9ccc;color:#e5f1ff}
+.gm-marker-org .gm-marker-arrow{color:#9ccbff}
+.gm-marker-org.gm-pinned:not(:hover):not(.gm-selected) .gm-marker-label{padding:2px 7px}
+.gm-marker-org.gm-label-above .gm-marker-label{top:auto;bottom:calc(100% - 4px)}
+.gm-marker-org.gm-label-right .gm-marker-label{top:50%;left:calc(100% - 4px);transform:translateY(-50%)}
+.gm-marker-org:hover .gm-marker-label{background:#1d3452;border-color:#c3e0ff}
+.gm-marker.gm-marker-org.gm-selected .gm-marker-dot{background:#c3e0ff;box-shadow:0 0 0 4px #10223acc,0 0 0 6px #c3e0ff}
+.gm-marker.gm-marker-org.gm-selected .gm-marker-label{background:#1d3452;border-color:#c3e0ff}
+.gm-marker.gm-selected{z-index:5}
+.gm-marker.gm-selected .gm-marker-dot{box-shadow:0 0 0 5px #153b2bcc,0 0 0 7px #a0f5ce;background:#b4ffda}
+.gm-marker.gm-selected .gm-marker-label{background:#214b37;border-color:#a0f5ce;color:#fff;box-shadow:0 0 0 1px #a0f5ce,0 3px 12px #0008}
+.gm-marker.gm-selected.gm-simulated .gm-marker-dot{background:#f3d890}
+.gm-marker:focus-visible{outline:2px solid #a0f5ce;outline-offset:4px;border-radius:50%;z-index:6}
+.gm-marker:hover{z-index:6}
+.gm-marker:hover .gm-marker-label,.gm-marker:focus-visible .gm-marker-label,.gm-marker.gm-selected .gm-marker-label{display:inline-flex}
+.gm-marker:hover .gm-marker-label{background:#23543d;border-color:#adf6d2}
+.gm-controls{position:absolute;top:14px;left:14px;z-index:3;display:flex;flex-direction:column;border:1px solid #527563;border-radius:5px;overflow:hidden;box-shadow:0 3px 12px #0005;background:#142d22}
+.gm-controls button{display:flex;align-items:center;justify-content:center;width:38px;height:38px;padding:0;border:0;border-bottom:1px solid #3d5b4a;border-radius:0;background:#142d22;color:#dcf7e7;font:500 24px/1 sans-serif;cursor:pointer}
+.gm-controls button:last-child{border-bottom:0}
+.gm-controls button:hover{background:#2a503a;color:#fff}
+.gm-controls button:disabled{opacity:.35;cursor:default}
+.gm-controls button.gm-fit{font-size:12px;font-weight:600}
+.gm-navigation-hint{position:absolute;top:16px;left:64px;z-index:2;padding:5px 8px;border:1px solid #385443;border-radius:4px;background:#12291fef;color:#c0d9ca;font-size:12px;pointer-events:none}
+.gm-tile-status{position:absolute;top:16px;right:14px;z-index:3;max-width:240px;padding:6px 9px;border:1px solid #3b5a49;border-radius:4px;background:#12291ff0;font-size:12px;pointer-events:none;color:#b4d3c1;box-shadow:0 2px 8px #0004}
+.gm-tile-failed{color:#efd9a0;border-color:#74623b;background:#302a1ef0}
+.gm-attribution{position:absolute;bottom:0;right:0;z-index:4;padding:4px 7px;background:#10261eed;color:#c4dece!important;font:10px/1.4 Arial,sans-serif;text-decoration:underline;cursor:pointer}
+.gm-scale{position:absolute;bottom:14px;left:15px;z-index:3;display:flex;flex-direction:column;align-items:center;padding:5px 7px;border-radius:3px;background:#10261ed9;color:#dceee3;font:11px/1.5 Arial,sans-serif;pointer-events:none}
+.gm-scale span{display:block;height:7px;border:2px solid #c4e5d1;border-top:0;min-width:20px}
+@media(max-width:600px){.gm-tile-status{top:55px;left:64px;right:auto;max-width:210px}.gm-marker-label{font-size:13px;padding:7px 10px;gap:8px}.gm-marker-zone .gm-marker-label{font-size:14px}.gm-navigation-hint{font-size:11px}}
+
+/* Keep the actual tree coordinates while using quiet, proportionate points. */
+.sx-explorer[data-level=park] .gm-marker-tree{width:6px;height:6px}
+.sx-explorer[data-level=park] .gm-marker-tree .gm-marker-dot{width:4px;height:4px}
+.sx-explorer[data-level=zone] .gm-marker-tree{width:12px;height:12px}
+.sx-explorer[data-level=zone] .gm-marker-tree .gm-marker-dot{width:7px;height:7px}
+.sx-explorer[data-level=tree] .gm-marker-tree{width:16px;height:16px}
+.sx-explorer[data-level=tree] .gm-marker-tree .gm-marker-dot{width:8px;height:8px}
+.sx-explorer .gm-marker-tree .gm-marker-dot,.sx-explorer .gm-marker-tree.gm-simulated .gm-marker-dot{border:0;background:#e7c77d;box-shadow:0 0 0 1px #463f29}
+.sx-explorer .gm-marker-tree.gm-measured .gm-marker-dot{background:#85dbb0;box-shadow:0 0 0 1px #1b5a40}
+.sx-explorer .gm-marker-tree.gm-selected .gm-marker-dot{box-shadow:0 0 0 3px #153b2bcc,0 0 0 4px #a0f5ce;background:#f3d890}
+.sx-explorer .gm-marker-tree .gm-marker-label{top:18px}
+
+.sx-explorer[data-level=park] .gm-marker-tree .gm-marker-dot,.sx-explorer[data-level=park] .gm-marker-tree.gm-simulated .gm-marker-dot,.sx-explorer[data-level=park] .gm-marker-tree.gm-measured .gm-marker-dot{box-shadow:none}
+
+/* Keep the selected tree label legible when the pointer rests on a neighbour. */
+.gm-canvas.gm-has-selected-tree .gm-marker-tree:not(.gm-selected):not(:focus-visible):hover .gm-marker-label{display:none}

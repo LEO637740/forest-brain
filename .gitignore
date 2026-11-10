@@ -27,3 +27,8 @@ tmp/
 *.db
 *.db-*
 *.log
+
+# Keep root-level historical documents local; README is the shared guide
+/*.md
+!/README.md
+/*.docx
